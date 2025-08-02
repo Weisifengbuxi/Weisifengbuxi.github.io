@@ -1,4 +1,11 @@
 /* 页脚与头图透明 */
+:root {
+  --theme-color-light: #FF4081; /* 浅背景（白）用高对比色 */
+  --theme-color-dark: #00FFFF;  /* 深背景（黑）用高对比色 */
+
+}
+
+
 #footer {
   background: transparent !important;
 }
@@ -43,3 +50,35 @@
   transition: text-shadow 1s linear !important;
 }
 
+
+/* 鼠标样式 */
+#cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: var(--theme-color-dark);
+  border-radius: 50%;
+  opacity: 0.6; /* 基础状态：中等透明度 */
+  z-index: 10086;
+  pointer-events: none;
+  transition: background 0.2s ease-in-out,
+              opacity 0.2s ease-in-out,
+              transform 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+#cursor.hidden {
+  opacity: 0; /* 隐藏状态：完全透明 */
+}
+
+#cursor.hover {
+  opacity: 0.4; /* 悬停状态：稍透明 */
+  transform: translate(-50%, -50%) scale(2.5);
+}
+
+#cursor.active {
+  opacity: 0.9; /* 点击状态：几乎不透明 */
+  transform: translate(-50%, -50%) scale(0.5);
+}
