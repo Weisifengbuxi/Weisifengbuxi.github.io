@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.weisifengbuxi.top/year/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
     
     <lastmod>2025-08-10</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/year/07/18/hello-world/</loc>
+    <loc>https://www.weisifengbuxi.top/2025/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
+    
+    <lastmod>2025-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/2025/07/18/hello-world/</loc>
     
     <lastmod>2025-08-10</lastmod>
     
@@ -59,15 +68,6 @@
     <loc>https://www.weisifengbuxi.top/cookies/index.html</loc>
     
     <lastmod>2025-08-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
-    
-    <lastmod>2025-07-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
