@@ -157,6 +157,44 @@ var defaultPlayMusicList = [];
 var themeColorMeta, pageHeaderEl, navMusicEl, consoleEl;
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 初始化天气插件
+function initWeatherWidget() {
+  // 检查天气容器是否存在
+  const weatherContainer = document.getElementById("tp-weather-widget");
+  if (!weatherContainer) return;
+
+  // 清空容器（避免 Pjax 跳转后重复渲染）
+  weatherContainer.innerHTML = "";
+
+  // 这里替换为你的天气插件官方初始化代码
+  // 示例：以腾讯天气插件为例
+  if (window.TPWeatherWidget) {
+    new TPWeatherWidget({
+      id: "tp-weather-widget",
+      city: "auto", // 自动获取城市（或填写具体城市代码）
+      layout: "1", // 插件布局样式
+      width: "100%",
+      height: "80"
+    });
+  } else {
+    // 如果插件脚本未加载，手动加载并初始化
+    getScript("https://weatherwidget.tencent.com/js/weather-widget.js")
+      .then(() => {
+        new TPWeatherWidget({
+          id: "tp-weather-widget",
+          city: "auto",
+          layout: "1",
+          width: "100%",
+          height: "80"
+        });
+      })
+      .catch(err => {
+        console.error("天气插件加载失败：", err);
+      });
+  }
+}
+
+
   let headerContentWidth, $nav, $rightMenu;
   let mobileSidebarOpen = false;
 

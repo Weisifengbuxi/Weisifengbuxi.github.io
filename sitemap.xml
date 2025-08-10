@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weisifengbuxi.top/archives/undefined.html</loc>
+    
+    <lastmod>2025-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/archives/undefined.html</loc>
+    
+    <lastmod>2025-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/baidu_verify_codeva-ZnDPiN6w2n/baidu_verify_codeva-ZnDPiN6w2n.html</loc>
     
     <lastmod>2025-08-04</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/wechat/index.html</loc>
-    
-    <lastmod>2025-08-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/archives/undefined.html</loc>
     
     <lastmod>2025-08-03</lastmod>
     
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/cookies/index.html</loc>
-    
-    <lastmod>2025-08-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/archives/undefined.html</loc>
     
     <lastmod>2025-08-03</lastmod>
     
@@ -193,7 +193,7 @@
 
   <url>
     <loc>https://www.weisifengbuxi.top/</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,18 +201,18 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/categories/%E6%94%BF%E7%AD%96/</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
