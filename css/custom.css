@@ -2,7 +2,7 @@
 :root {
   --theme-color-light: #FF4081; /* 浅背景（白）用高对比色 */
   --theme-color-dark: #00FFFF;  /* 深背景（黑）用高对比色 */
-
+  --theme-color: var(--theme-color-dark); /* 补充主题色变量定义，默认使用浅色模式颜色 */
 }
 
 
@@ -29,16 +29,7 @@
   background: transparent !important;
 }
 
-/* 夜间模式菜单栏发光字 */
-[data-theme="dark"] #nav .site-page,
-[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
-  text-shadow: 0 0 2px var(--theme-color) !important;
-}
-
-/* 手机端适配 */
-[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
-  text-shadow: 0 0 2px var(--theme-color) !important;
-}
+/* 手机端适配（已移除菜单栏发光字相关样式） */
 
 /* 闪烁变动颜色连续渐变 */
 #site-name,
@@ -49,7 +40,6 @@
 .author-info__description {
   transition: text-shadow 1s linear !important;
 }
-
 
 /* 鼠标样式 */
 #cursor {
@@ -81,4 +71,157 @@
 #cursor.active {
   opacity: 0.9; /* 点击状态：几乎不透明 */
   transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* 文章页H1-H6图标样式效果 */
+/* 控制风车转动速度 4s那里可以自己调节快慢 */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  -webkit-animation: ccc 4s linear infinite;
+  animation: ccc 4s linear infinite;
+}
+/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */
+@-webkit-keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+@keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+/* 设置风车颜色 */
+/*#content-inner.layout h1::before {*/
+/*  content: "♦"; !* 添加内容，可替换为其他符号或图标 *!*/
+/*  color: #ef50a8;*/
+/*  margin-left: -1.55rem;*/
+/*  font-size: 1.3rem;*/
+/*  margin-top: -0.23rem;*/
+/*}*/
+#content-inner.layout h2::before {
+  content: "♥"; /* 添加内容，可替换为其他符号或图标 */
+  color: #fb7061;
+  margin-left: -1.35rem;
+  font-size: 1.1rem;
+  margin-top: -0.12rem;
+}
+#content-inner.layout h3::before {
+  content: "♣"; /* 添加内容，可替换为其他符号或图标 */
+  color: #ffbf00;
+  margin-left: -1.22rem;
+  font-size: 0.95rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h4::before {
+  content: "♠"; /* 添加内容，可替换为其他符号或图标 */
+  color: #a9e000;
+  margin-left: -1.05rem;
+  font-size: 0.8rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h5::before {
+  content: "★"; /* 添加内容，可替换为其他符号或图标 */
+  color: #57c850;
+  margin-left: -0.9rem;
+  font-size: 0.7rem;
+  margin-top: 0rem;
+}
+#content-inner.layout h6::before {
+  content: "☆"; /* 添加内容，可替换为其他符号或图标 */
+  color: #5ec1e0;
+  margin-left: -0.9rem;
+  font-size: 0.66rem;
+  margin-top: 0rem;
+}
+/* 设置风车hover动效 6s那里可以自己调节快慢*/
+#content-inner.layout h1:hover,
+#content-inner.layout h2:hover,
+#content-inner.layout h3:hover,
+#content-inner.layout h4:hover,
+#content-inner.layout h5:hover,
+#content-inner.layout h6:hover {
+  color: var(--theme-color);
+}
+#content-inner.layout h1:hover::before,
+#content-inner.layout h2:hover::before,
+#content-inner.layout h3:hover::before,
+#content-inner.layout h4:hover::before,
+#content-inner.layout h5:hover::before,
+#content-inner.layout h6:hover::before {
+  color: var(--theme-color);
+  -webkit-animation: ccc 6s linear infinite;
+  animation: ccc 6s linear infinite;
+}
+
+/* 滚动条样式 - 优化版 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  /* 补充变量默认值，防止变量未定义时失效 */
+  background-color: var(--theme-color, #49b1f5);
+  /* 补充标准语法 */
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+/* 适配深色模式 */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.1);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color-dark, #66ccff);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 补充Firefox支持 */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-color, #49b1f5) rgba(73, 177, 245, 0.2);
+  }
+
+  [data-theme="dark"] * {
+    scrollbar-color: var(--theme-color-dark, #66ccff) rgba(73, 177, 245, 0.1);
+  }
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var(--theme-color, #49b1f5);
 }
