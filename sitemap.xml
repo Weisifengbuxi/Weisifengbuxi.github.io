@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weisifengbuxi.top/2025/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
+    
+    <lastmod>2025-08-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/about/index.html</loc>
     
     <lastmod>2025-08-17</lastmod>
@@ -56,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/dist/waifu-tips.json</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/demo/demo.html</loc>
     
     <lastmod>2025-08-12</lastmod>
@@ -83,16 +83,16 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
+    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/dist/waifu-tips.json</loc>
     
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/2025/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
     
     <lastmod>2025-08-10</lastmod>
     
