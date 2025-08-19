@@ -121,28 +121,28 @@ h6::before {
   margin-top: -0.12rem;
 }
 #content-inner.layout h3::before {
-  content: "♦"; /* 添加内容，可替换为其他符号或图标 */
+  /*content: "♦"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #ffbf00;
   margin-left: -1.22rem;
   font-size: 0.95rem;
   margin-top: -0.09rem;
 }
 #content-inner.layout h4::before {
-  content: "♥"; /* 添加内容，可替换为其他符号或图标 */
+  /*content: "♥"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #a9e000;
   margin-left: -1.05rem;
   font-size: 0.8rem;
   margin-top: -0.09rem;
 }
 #content-inner.layout h5::before {
-  content: "★"; /* 添加内容，可替换为其他符号或图标 */
+  /*content: "★"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #57c850;
   margin-left: -0.9rem;
   font-size: 0.7rem;
   margin-top: 0rem;
 }
 #content-inner.layout h6::before {
-  content: "☆"; /* 添加内容，可替换为其他符号或图标 */
+  /*content: "☆"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #5ec1e0;
   margin-left: -0.9rem;
   font-size: 0.66rem;
