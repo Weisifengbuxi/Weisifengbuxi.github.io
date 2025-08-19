@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weisifengbuxi.top/dailyPhoto/index.html</loc>
+    
+    <lastmod>2025-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/gamePhotos/index.html</loc>
+    
+    <lastmod>2025-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/album/index.html</loc>
     
     <lastmod>2025-08-19</lastmod>
@@ -110,15 +128,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/dailyPhoto/index.html</loc>
-    
-    <lastmod>2025-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/wordScenery/index.html</loc>
     
     <lastmod>2025-07-27</lastmod>
@@ -200,14 +209,14 @@
 
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
+    <loc>https://www.weisifengbuxi.top/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
