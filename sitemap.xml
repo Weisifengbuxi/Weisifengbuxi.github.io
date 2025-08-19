@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.weisifengbuxi.top/2025/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
+    <loc>https://www.weisifengbuxi.top/posts/2025/08/10/%E7%A7%91%E7%9B%AE%E4%BA%8C%E5%8F%8D%E6%80%9D/</loc>
     
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,78 +20,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/README.en.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/README.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/package.json</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/renovate.json</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/tsconfig.json</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/demo/demo.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/demo/login.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/live2d-widget-master/live2d-widget-master/dist/waifu-tips.json</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
     
     <lastmod>2025-08-10</lastmod>
@@ -101,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/2025/07/18/hello-world/</loc>
+    <loc>https://www.weisifengbuxi.top/posts/2025/07/18/hello-world/</loc>
     
     <lastmod>2025-08-10</lastmod>
     
@@ -265,7 +193,7 @@
 
   <url>
     <loc>https://www.weisifengbuxi.top/</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -273,14 +201,14 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

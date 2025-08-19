@@ -106,15 +106,15 @@ h6::before {
   }
 }
 /* 设置风车颜色 */
-/*#content-inner.layout h1::before {*/
-/*  content: "♦"; !* 添加内容，可替换为其他符号或图标 *!*/
-/*  color: #ef50a8;*/
-/*  margin-left: -1.55rem;*/
-/*  font-size: 1.3rem;*/
-/*  margin-top: -0.23rem;*/
-/*}*/
+#content-inner.layout h1::before {
+  content: ""; /* 添加内容，可替换为其他符号或图标 */
+  color: #ef50a8;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
 #content-inner.layout h2::before {
-  content: "♥"; /* 添加内容，可替换为其他符号或图标 */
+  /*content: ""; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #fb7061;
   margin-left: -1.35rem;
   font-size: 1.1rem;
