@@ -1,13 +1,10 @@
-fetch('https://api.gmit.vip/Api/UserInfo').then(data=>data.json()).then(data=>{
-    let html = '<style>.visitor_location{color:#cb4c46;font-weight:bold;}.visitor_ip{color:#2d80c2;font-weight:bold;}</style>'
-    html += '<div class="visitor">'
-    html += '欢迎来自 ' + '<span class="visitor_location">' + data.data.location + '</span>' + ' 的小伙伴！'
-    html += '</br>'
-    html += '访问IP：' + '<span class="visitor_ip">' + data.data.ip + '</span>'
-    html += '</div>'
-    document.getElementById('visitor-container').innerHTML = html
-}).catch(function(error) {
-    console.log(error);
-});
-
-
+window.onload = function() {
+    // 搜狐接口全局变量 returnCitySN
+    const ip = returnCitySN ? returnCitySN.cip : '未知';
+    const ipElement = document.createElement('div');
+    ipElement.style.position = 'fixed';
+    ipElement.style.bottom = '20px';
+    ipElement.style.right = '20px';
+    ipElement.innerHTML = `你的公网 IP：${ip}`;
+    document.body.appendChild(ipElement);
+};
