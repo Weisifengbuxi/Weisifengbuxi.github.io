@@ -1,70 +1,63 @@
-// 获取当前IP地址和浏览器标识
-function getBrowserInfo() {
-    const agent = navigator.userAgent.toLowerCase();
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. 获取页面中的显示容器
+    const container = document.querySelector('.visitor-info-container');
+    const locationEl = container.querySelector('.location');
+    const ipEl = container.querySelector('.ip-address');
+    const browserEl = container.querySelector('.browser');
 
-    // 更全面的浏览器检测正则
-    const browsers = [
-        { regex: /edge\/([\d.]+)/, name: 'Edge' },
-        { regex: /edg\/([\d.]+)/, name: 'Edge Chromium' },
-        { regex: /opr\/([\d.]+)/, name: 'Opera' },
-        { regex: /chrome\/([\d.]+)/, name: 'Chrome' },
-        { regex: /firefox\/([\d.]+)/, name: 'Firefox' },
-        { regex: /safari\/([\d.]+)/, name: 'Safari' },
-        { regex: /rv:([\d.]+)\) like gecko/, name: 'IE 11' },
-        { regex: /msie ([\d.]+)/, name: 'IE' }
-    ];
-
-    // 循环检测浏览器
-    for (const browser of browsers) {
-        const match = agent.match(browser.regex);
-        if (match) {
-            return `${browser.name} ${match[1]}`;
-        }
-    }
-
-    // 无法识别时返回精简信息
-    return `Unknown (${agent.substring(0, 50)}...)`;
-}
-
-// 确保DOM加载完成后再执行
-document.addEventListener('DOMContentLoaded', () => {
-    const ipContent = document.querySelector(".ip_content");
-
-    // 检查DOM元素是否存在
-    if (!ipContent) {
-        console.warn("未找到.ip_content元素，无法显示IP信息");
+    if (!container || !locationEl || !ipEl || !browserEl) {
+        console.error('访客信息容器元素缺失');
         return;
     }
 
-    // 保存原始IPCallBack（如果存在）
-    const originalIPCallBack = window.IPCallBack;
-
-    // 定义IPCallBack函数处理IP信息
-    window.IPCallBack = function(data) {
-        // 先调用原始回调（如果有）
-        if (typeof originalIPCallBack === 'function') {
-            originalIPCallBack(data);
+    // 2. 浏览器信息检测
+    function getBrowserInfo() {
+        const ua = navigator.userAgent;
+        if (ua.includes('Edg')) {
+            return `Edge ${ua.match(/Edg\/(\d+)/)[1]}`;
+        } else if (ua.includes('Chrome') && !ua.includes('Edg')) {
+            return `Chrome ${ua.match(/Chrome\/(\d+)/)[1]}`;
+        } else if (ua.includes('Firefox')) {
+            return `Firefox ${ua.match(/Firefox\/(\d+)/)[1]}`;
+        } else if (ua.includes('Safari') && !ua.includes('Chrome')) {
+            return `Safari ${ua.match(/Safari\/(\d+)/)[1]}`;
+        } else if (ua.includes('Opera')) {
+            return `Opera ${ua.match(/Opera\/(\d+)/)[1]}`;
+        } else {
+            return '未知浏览器';
         }
-
-        // 检查数据有效性
-        if (!data || data.err) {
-            ipContent.innerHTML = '<span class="p red">无法获取IP信息</span>';
-            return;
-        }
-
-        // 安全获取数据，提供默认值
-        const city = data.city || '未知城市';
-        const ip = data.ip || '未知IP';
-        const browserInfo = getBrowserInfo();
-
-        // 构建显示内容
-        ipContent.innerHTML = `欢迎来自 <span class="p red">${city}</span> 的小伙伴<br>
-                              访问IP为： <span class='p cyan'>${ip}</span><br>
-                              浏览器版本：<span class='p blue'>${browserInfo}</span>`;
-    };
-
-    // 如果已有数据，立即调用
-    if (window.IPData) {
-        window.IPCallBack(window.IPData);
     }
+
+    // 3. 主动请求IP信息（核心修复）
+    function fetchIPInfo() {
+        // 使用fetch API主动请求数据
+        fetch('https://whois.pconline.com.cn/ipJson.jsp?json=true')
+            .then(response => {
+                // 处理跨域可能导致的文本格式返回
+                return response.text().then(text => {
+                    // 去除可能的干扰字符（部分接口会加括号）
+                    const cleanText = text.replace(/^[\s\S]*?\{/, '{').replace(/\}[\s\S]*?$/, '}');
+                    return JSON.parse(cleanText);
+                });
+            })
+            .then(data => {
+                // 验证数据有效性
+                if (data && !data.err) {
+                    locationEl.textContent = data.addr || '未知地区';
+                    ipEl.textContent = data.ip || '未知IP';
+                } else {
+                    locationEl.textContent = '获取失败';
+                    ipEl.textContent = '获取失败';
+                }
+            })
+            .catch(error => {
+                console.error('IP信息获取失败:', error);
+                locationEl.textContent = '获取失败';
+                ipEl.textContent = '获取失败';
+            });
+    }
+
+    // 4. 执行渲染
+    browserEl.textContent = getBrowserInfo(); // 先显示浏览器信息
+    fetchIPInfo(); // 再获取并显示IP信息
 });
