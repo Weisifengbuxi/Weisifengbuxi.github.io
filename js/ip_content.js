@@ -1,51 +1,70 @@
-//获取当前IP地址和浏览器标识
+// 获取当前IP地址和浏览器标识
 function getBrowserInfo() {
-    var agent = navigator.userAgent.toLowerCase();
+    const agent = navigator.userAgent.toLowerCase();
 
-    var regStr_ie = /msie [\d.]+;/gi;
-    var regStr_ff = /firefox\/[\d.]+/gi
-    var regStr_chrome = /chrome\/[\d.]+/gi;
-    var regStr_saf = /safari\/[\d.]+/gi;
+    // 更全面的浏览器检测正则
+    const browsers = [
+        { regex: /edge\/([\d.]+)/, name: 'Edge' },
+        { regex: /edg\/([\d.]+)/, name: 'Edge Chromium' },
+        { regex: /opr\/([\d.]+)/, name: 'Opera' },
+        { regex: /chrome\/([\d.]+)/, name: 'Chrome' },
+        { regex: /firefox\/([\d.]+)/, name: 'Firefox' },
+        { regex: /safari\/([\d.]+)/, name: 'Safari' },
+        { regex: /rv:([\d.]+)\) like gecko/, name: 'IE 11' },
+        { regex: /msie ([\d.]+)/, name: 'IE' }
+    ];
 
-    //IE
-    if (agent.indexOf("msie") > 0) {
-        return agent.match(regStr_ie);
+    // 循环检测浏览器
+    for (const browser of browsers) {
+        const match = agent.match(browser.regex);
+        if (match) {
+            return `${browser.name} ${match[1]}`;
+        }
     }
 
-    //firefox
-    if (agent.indexOf("firefox") > 0) {
-        return agent.match(regStr_ff);
-    }
-
-    //Chrome
-    if (agent.indexOf("chrome") > 0) {
-        return agent.match(regStr_chrome);
-    }
-
-    //Safari
-    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
-        return agent.match(regStr_saf);
-    }
-
-    // 新增：返回其他浏览器信息
-    return agent;
+    // 无法识别时返回精简信息
+    return `Unknown (${agent.substring(0, 50)}...)`;
 }
 
-var ip_content = document.querySelector(".ip_content");
+// 确保DOM加载完成后再执行
+document.addEventListener('DOMContentLoaded', () => {
+    const ipContent = document.querySelector(".ip_content");
 
-// 定义IPCallBack函数处理新格式的IP信息
-function IPCallBack(data) {
-    // 检查DOM元素是否存在且数据有效
-    if (ip_content != null && data && !data.err) {
-        // 构建显示内容，映射新的数据字段
-        ip_content.innerHTML = '欢迎来自 <span class="p red">' + data.city + "</span> 的小伙伴<br>" +
-                              "访问IP为： <span class='p cyan'>" + data.ip + "</span><br>" +
-                              "浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
+    // 检查DOM元素是否存在
+    if (!ipContent) {
+        console.warn("未找到.ip_content元素，无法显示IP信息");
+        return;
     }
-}
 
-// 如果IPCallBack已存在，立即调用处理已有的数据
-if (window.IPCallBack) {
-    // 这里不需要重新定义，而是确保我们的处理函数能被调用
-    // 实际场景中，通常是第三方脚本会调用这个函数传递数据
-}
+    // 保存原始IPCallBack（如果存在）
+    const originalIPCallBack = window.IPCallBack;
+
+    // 定义IPCallBack函数处理IP信息
+    window.IPCallBack = function(data) {
+        // 先调用原始回调（如果有）
+        if (typeof originalIPCallBack === 'function') {
+            originalIPCallBack(data);
+        }
+
+        // 检查数据有效性
+        if (!data || data.err) {
+            ipContent.innerHTML = '<span class="p red">无法获取IP信息</span>';
+            return;
+        }
+
+        // 安全获取数据，提供默认值
+        const city = data.city || '未知城市';
+        const ip = data.ip || '未知IP';
+        const browserInfo = getBrowserInfo();
+
+        // 构建显示内容
+        ipContent.innerHTML = `欢迎来自 <span class="p red">${city}</span> 的小伙伴<br>
+                              访问IP为： <span class='p cyan'>${ip}</span><br>
+                              浏览器版本：<span class='p blue'>${browserInfo}</span>`;
+    };
+
+    // 如果已有数据，立即调用
+    if (window.IPData) {
+        window.IPCallBack(window.IPData);
+    }
+});
