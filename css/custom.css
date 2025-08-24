@@ -81,10 +81,9 @@ h3::before,
 h4::before,
 h5::before,
 h6::before {
-  -webkit-animation: ccc 4s linear infinite;
-  animation: ccc 4s linear infinite;
+  -webkit-animation: ccc 1.6s linear infinite;
+  animation: ccc 1.6s linear infinite;
 }
-/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */
 @-webkit-keyframes ccc {
   0% {
     -webkit-transform: rotate(0deg);
@@ -107,42 +106,36 @@ h6::before {
 }
 /* 设置风车颜色 */
 #content-inner.layout h1::before {
-  /*content: "♣"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #ef50a8;
   margin-left: -1.55rem;
   font-size: 1.3rem;
   margin-top: -0.23rem;
 }
 #content-inner.layout h2::before {
-  /*content: ""; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #fb7061;
   margin-left: -1.35rem;
   font-size: 1.1rem;
   margin-top: -0.12rem;
 }
 #content-inner.layout h3::before {
-  /*content: "♦"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #ffbf00;
   margin-left: -1.22rem;
   font-size: 0.95rem;
   margin-top: -0.09rem;
 }
 #content-inner.layout h4::before {
-  /*content: "♥"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #a9e000;
   margin-left: -1.05rem;
   font-size: 0.8rem;
   margin-top: -0.09rem;
 }
 #content-inner.layout h5::before {
-  /*content: "★"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #57c850;
   margin-left: -0.9rem;
   font-size: 0.7rem;
   margin-top: 0rem;
 }
 #content-inner.layout h6::before {
-  /*content: "☆"; !* 添加内容，可替换为其他符号或图标 *!*/
   color: #5ec1e0;
   margin-left: -0.9rem;
   font-size: 0.66rem;
@@ -155,7 +148,7 @@ h6::before {
 #content-inner.layout h4:hover,
 #content-inner.layout h5:hover,
 #content-inner.layout h6:hover {
-  color: var(--theme-color);
+  color: #3b70fc;
 }
 #content-inner.layout h1:hover::before,
 #content-inner.layout h2:hover::before,
@@ -163,9 +156,13 @@ h6::before {
 #content-inner.layout h4:hover::before,
 #content-inner.layout h5:hover::before,
 #content-inner.layout h6:hover::before {
-  color: var(--theme-color);
-  -webkit-animation: ccc 6s linear infinite;
-  animation: ccc 6s linear infinite;
+  color: #3b70fc;
+  -webkit-animation: ccc 3.2s linear infinite;
+  animation: ccc 3.2s linear infinite;
+}
+
+#rightside_config i.fas.fa-cog.fa-spin {
+  animation: fa-spin 5s linear infinite;
 }
 
 /* 滚动条样式 - 优化版 */
