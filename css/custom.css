@@ -1,37 +1,32 @@
-/* 页脚与头图透明 */
+/* 主题色变量定义 */
 :root {
-  --theme-color-light: #FF4081; /* 浅背景（白）用高对比色 */
-  --theme-color-dark: #00FFFF;  /* 深背景（黑）用高对比色 */
-  --theme-color: var(--theme-color-dark); /* 补充主题色变量定义，默认使用浅色模式颜色 */
+  --theme-color-light: #FF4081; /* 浅背景用色 */
+  --theme-color-dark: #00FFFF;  /* 深背景用色 */
+  --theme-color: var(--theme-color-dark); /* 默认深色模式 */
 }
 
+/* 深色模式切换 */
+@media (prefers-color-scheme: dark) {
+  :root { --theme-color: var(--theme-color-dark); }
+}
+[data-theme="dark"] { --theme-color: var(--theme-color-dark); }
+[data-theme="light"] { --theme-color: var(--theme-color-light); }
 
-#footer {
-  background: transparent !important;
+/* 页脚与头图透明 */
+body #footer,
+body #page-header {
+  background: transparent;
 }
-#page-header {
-  background: transparent !important;
+body #footer::before,
+body #page-header::before {
+  background: transparent;
 }
-
-/* 白天模式遮罩透明 */
-#footer::before {
-  background: transparent !important;
-}
-#page-header::before {
-  background: transparent !important;
-}
-
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
-  background: transparent !important;
+[data-theme="dark"] body #footer::before,
+[data-theme="dark"] body #page-header::before {
+  background: transparent;
 }
 
-/* 手机端适配（已移除菜单栏发光字相关样式） */
-
-/* 闪烁变动颜色连续渐变 */
+/* 文字渐变动画 */
 #site-name,
 #site-title,
 #site-subtitle,
@@ -41,14 +36,14 @@
   transition: text-shadow 1s linear !important;
 }
 
-/* 鼠标样式 */
+/* 鼠标样式（保留） */
 #cursor {
   position: fixed;
   width: 16px;
   height: 16px;
   background: var(--theme-color-dark);
   border-radius: 50%;
-  opacity: 0.6; /* 基础状态：中等透明度 */
+  opacity: 0.6;
   z-index: 10086;
   pointer-events: none;
   transition: background 0.2s ease-in-out,
@@ -58,128 +53,109 @@
   left: 0;
   transform: translate(-50%, -50%);
 }
+#cursor.hidden { opacity: 0; }
+#cursor.hover { opacity: 0.4; transform: translate(-50%, -50%) scale(2.5); }
+#cursor.active { opacity: 0.9; transform: translate(-50%, -50%) scale(0.5); }
 
-#cursor.hidden {
-  opacity: 0; /* 隐藏状态：完全透明 */
+/* 文章内容区标题风车图标（限制范围） */
+/* 文章内容区标题风车图标基础样式 */
+.post-content h1::before,
+.post-content h2::before,
+.post-content h3::before,
+.post-content h4::before,
+.post-content h5::before,
+.post-content h6::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f863"; /* 风车图标 */
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: -1.2em;
+  width: 1em;
+  /* 默认状态应用顺时针动画 */
+  animation: windmill 1.6s linear infinite;
 }
 
-#cursor.hover {
-  opacity: 0.4; /* 悬停状态：稍透明 */
-  transform: translate(-50%, -50%) scale(2.5);
+/* 风车顺时针旋转动画（核心修改） */
+@keyframes windmill {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); } /* 负值=顺时针旋转 */
 }
 
-#cursor.active {
-  opacity: 0.9; /* 点击状态：几乎不透明 */
-  transform: translate(-50%, -50%) scale(0.5);
+/* 标题hover时的动画（保持顺时针，调整速度） */
+.post-content h1:hover::before,
+.post-content h2:hover::before,
+.post-content h3:hover::before,
+.post-content h4:hover::before,
+.post-content h5:hover::before,
+.post-content h6:hover::before {
+  color: #3b70fc;
+  /* 复用顺时针动画，仅改变时长 */
+  animation: windmill 3.2s linear infinite;
 }
 
-/* 文章页H1-H6图标样式效果 */
-/* 控制风车转动速度 4s那里可以自己调节快慢 */
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-  -webkit-animation: ccc 1.6s linear infinite;
-  animation: ccc 1.6s linear infinite;
-}
-@-webkit-keyframes ccc {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-1turn);
-    transform: rotate(-1turn);
-  }
-}
-@keyframes ccc {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-1turn);
-    transform: rotate(-1turn);
-  }
-}
-/* 设置风车颜色 */
-#content-inner.layout h1::before {
+
+/* 各标题图标样式微调 */
+.post-content h1::before {
   color: #ef50a8;
-  margin-left: -1.55rem;
   font-size: 1.3rem;
-  margin-top: -0.23rem;
 }
-#content-inner.layout h2::before {
+.post-content h2::before {
   color: #fb7061;
-  margin-left: -1.35rem;
   font-size: 1.1rem;
-  margin-top: -0.12rem;
 }
-#content-inner.layout h3::before {
+.post-content h3::before {
   color: #ffbf00;
-  margin-left: -1.22rem;
   font-size: 0.95rem;
-  margin-top: -0.09rem;
 }
-#content-inner.layout h4::before {
+.post-content h4::before {
   color: #a9e000;
-  margin-left: -1.05rem;
   font-size: 0.8rem;
-  margin-top: -0.09rem;
 }
-#content-inner.layout h5::before {
+.post-content h5::before {
   color: #57c850;
-  margin-left: -0.9rem;
   font-size: 0.7rem;
-  margin-top: 0rem;
 }
-#content-inner.layout h6::before {
+.post-content h6::before {
   color: #5ec1e0;
-  margin-left: -0.9rem;
   font-size: 0.66rem;
-  margin-top: 0rem;
-}
-/* 设置风车hover动效 6s那里可以自己调节快慢*/
-#content-inner.layout h1:hover,
-#content-inner.layout h2:hover,
-#content-inner.layout h3:hover,
-#content-inner.layout h4:hover,
-#content-inner.layout h5:hover,
-#content-inner.layout h6:hover {
-  color: #3b70fc;
-}
-#content-inner.layout h1:hover::before,
-#content-inner.layout h2:hover::before,
-#content-inner.layout h3:hover::before,
-#content-inner.layout h4:hover::before,
-#content-inner.layout h5:hover::before,
-#content-inner.layout h6:hover::before {
-  color: #3b70fc;
-  -webkit-animation: ccc 3.2s linear infinite;
-  animation: ccc 3.2s linear infinite;
 }
 
+/* 标题hover效果 */
+.post-content h1:hover,
+.post-content h2:hover,
+.post-content h3:hover,
+.post-content h4:hover,
+.post-content h5:hover,
+.post-content h6:hover {
+  color: #3b70fc;
+}
+.post-content h1:hover::before,
+.post-content h2:hover::before,
+.post-content h3:hover::before,
+.post-content h4:hover::before,
+.post-content h5:hover::before,
+.post-content h6:hover::before {
+  color: #3b70fc;
+  animation: windmill 3.2s linear infinite;
+}
+
+/* 右侧设置按钮动画 */
 #rightside_config i.fas.fa-cog.fa-spin {
   animation: fa-spin 5s linear infinite;
 }
 
-/* 滚动条样式 - 优化版 */
+/* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: rgba(73, 177, 245, 0.2);
   border-radius: 2em;
 }
-
 ::-webkit-scrollbar-thumb {
-  /* 补充变量默认值，防止变量未定义时失效 */
-  background-color: var(--theme-color, #49b1f5);
-  /* 补充标准语法 */
+  background-color: var(--theme-color);
   background-image: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 25%,
@@ -192,33 +168,30 @@ h6::before {
   );
   border-radius: 2em;
 }
-
-/* 适配深色模式 */
 [data-theme="dark"] ::-webkit-scrollbar-track {
   background-color: rgba(73, 177, 245, 0.1);
 }
-
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
-  background-color: var(--theme-color-dark, #66ccff);
-}
-
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
 
-/* 补充Firefox支持 */
+/* Firefox滚动条支持 */
 @supports (scrollbar-width: thin) {
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--theme-color, #49b1f5) rgba(73, 177, 245, 0.2);
+    scrollbar-color: var(--theme-color) rgba(73, 177, 245, 0.2);
   }
-
   [data-theme="dark"] * {
-    scrollbar-color: var(--theme-color-dark, #66ccff) rgba(73, 177, 245, 0.1);
+    scrollbar-color: var(--theme-color) rgba(73, 177, 245, 0.1);
   }
 }
 
+/* 文本选中样式 */
+::selection {
+  color: #fff;
+  background-color: var(--theme-color);
+}
 ::-moz-selection {
   color: #fff;
-  background-color: var(--theme-color, #49b1f5);
+  background-color: var(--theme-color);
 }
