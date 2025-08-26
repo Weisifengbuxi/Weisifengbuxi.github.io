@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weisifengbuxi.top/comments/index.html</loc>
+    
+    <lastmod>2025-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/index.html</loc>
+    
+    <lastmod>2025-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/link/index.html</loc>
+    
+    <lastmod>2025-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/posts/74bcc131.html</loc>
     
     <lastmod>2025-08-23</lastmod>
@@ -138,24 +165,6 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/wordScenery/index.html</loc>
-    
-    <lastmod>2025-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/tags/index.html</loc>
-    
-    <lastmod>2025-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/link/index.html</loc>
     
     <lastmod>2025-07-27</lastmod>
     
