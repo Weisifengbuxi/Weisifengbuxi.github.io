@@ -4,7 +4,16 @@
   <url>
     <loc>https://www.weisifengbuxi.top/fcircle/index.html</loc>
     
-    <lastmod>2025-08-31</lastmod>
+    <lastmod>2025-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/link/index.html</loc>
+    
+    <lastmod>2025-09-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/index.html</loc>
-    
-    <lastmod>2025-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/link/index.html</loc>
     
     <lastmod>2025-08-26</lastmod>
     
@@ -218,14 +218,14 @@
 
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
+    <loc>https://www.weisifengbuxi.top/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
