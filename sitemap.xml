@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.weisifengbuxi.top/posts/c477b506.html</loc>
+    <loc>https://www.weisifengbuxi.top/about/index.html</loc>
     
-    <lastmod>2025-09-23</lastmod>
+    <lastmod>2025-09-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,25 @@
   <url>
     <loc>https://www.weisifengbuxi.top/categories/index.html</loc>
     
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-09-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/index.html</loc>
+    
+    <lastmod>2025-09-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/posts/c477b506.html</loc>
+    
+    <lastmod>2025-09-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/index.html</loc>
-    
-    <lastmod>2025-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/posts/4a17b156.html</loc>
     
     <lastmod>2025-08-23</lastmod>
@@ -122,15 +131,6 @@
     <loc>https://www.weisifengbuxi.top/gamePhotos/index.html</loc>
     
     <lastmod>2025-08-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/about/index.html</loc>
-    
-    <lastmod>2025-08-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -227,13 +227,6 @@
 
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
     <lastmod>2025-09-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -242,6 +235,13 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
