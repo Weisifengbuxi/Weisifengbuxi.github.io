@@ -227,6 +227,20 @@
 
   
   <url>
+    <loc>https://www.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/LaTex/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -262,20 +276,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/tags/LaTex/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -292,14 +292,14 @@
 
   
   <url>
-    <loc>https://www.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/%E6%AF%94%E8%B5%9B/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/categories/%E6%AF%94%E8%B5%9B/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
