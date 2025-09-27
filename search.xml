@@ -13,14 +13,20 @@
       
       <categories>
           
-          <category> 笔记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 学习笔记 </tag>
+            <tag> 笔记 </tag>
+            
+            <tag> 链表 </tag>
+            
+            <tag> 递归 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
       
@@ -47,6 +53,8 @@
             
             <tag> 数学建模 </tag>
             
+            <tag> LaTex </tag>
+            
         </tags>
       
     </entry>
@@ -63,14 +71,16 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 生活日常 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 生活日常 </tag>
+            <tag> 生活 </tag>
+            
+            <tag> 科目二 </tag>
             
         </tags>
       
