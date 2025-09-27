@@ -227,6 +227,13 @@
 
   
   <url>
+    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weisifengbuxi.top/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -277,13 +284,6 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/tags/Hello-World/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
