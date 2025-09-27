@@ -1838,11 +1838,6 @@ function initWeatherWidget() {
     anzhiyu.addEventListenerConsoleMusicList(false);
     anzhiyu.initPaginationObserver();
 
-
-    if (window.AuroraPerformanceOptimizer && typeof window.AuroraPerformanceOptimizer.initBackgroundToggle === 'function') {
-     window.AuroraPerformanceOptimizer.initBackgroundToggle();
-    }
-
     setTimeout(() => {
       setInputFocusListener();
       if (typeof addFriendLinksInFooter === "function") {
