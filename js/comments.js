@@ -84,7 +84,7 @@
   };
 
   const LatestComments = {
-    API_URL: 'https://twikoo-api-eight-lime.vercel.app/',
+    API_URL: 'https://twikoo.weisifengbuxi.top/',
     ADMIN_EMAIL_MD5: '5efa04b92bf4c211f777497910dd1008eefed6764f688ab35f2babe3dffb5409',
     PAGE_SIZE: 5,
     LOADING_GIF: 'https://lib.bsgun.cn/Hexo-static/img/loading.gif',

@@ -46,9 +46,9 @@ body #page-header::before {
   opacity: 0.6;
   z-index: 10086;
   pointer-events: none;
-  transition: background 0.2s ease-in-out,
-              opacity 0.2s ease-in-out,
-              transform 0.2s ease-in-out;
+  transition: background 0.01s ease-in-out,
+              opacity 0.01s ease-in-out,
+              transform 0.1s ease-in-out;
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
@@ -65,7 +65,7 @@ body #page-header::before {
 #article-container .post-content h4::before,
 #article-container .post-content h5::before,
 #article-container .post-content h6::before {
-  font-family: "Font Awesome 6 Free";
+  /*font-family: "Font Awesome 6 Free";*/
   content: "\f863"; /* 风车图标 */
   font-weight: 900;
   display: inline-block;
@@ -191,4 +191,22 @@ body #page-header::before {
 ::-moz-selection {
   color: #fff;
   background-color: var(--theme-color);
+}
+
+
+#poem_sentence {
+  font-size: 15px; /* 与朝代保持一致或稍大，如17px */
+}
+/* 调整朝代（年份）字体大小 */
+#poem_dynasty {
+  font-size: 14px; /* 数值越大字体越大，可根据需求修改（如18px） */
+}
+
+/* 调整作者及作品名字体大小 */
+#poem_author {
+  font-size: 14px; /* 与朝代保持一致或稍大，如17px */
+}
+
+.text-center {
+  text-align: center;
 }
