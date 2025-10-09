@@ -19813,14 +19813,28 @@ p.p.gray {
 }
 [data-theme='dark'] #page-header.nav-fixed > #nav,
 [data-theme='dark'] #page-header.not-top-img > #nav {
-  background: var(--anzhiyu-black);
+  background: rgba(18,18,18,0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
+  -webkit-transition: background 0.3s, backdrop-filter 0.3s;
+  -moz-transition: background 0.3s, backdrop-filter 0.3s;
+  -o-transition: background 0.3s, backdrop-filter 0.3s;
+  -ms-transition: background 0.3s, backdrop-filter 0.3s;
+  transition: background 0.3s, backdrop-filter 0.3s;
 }
 [data-theme='dark'] .post #page-header.nav-fixed > #nav {
-  background: var(--anzhiyu-card-bg);
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  background: rgba(18,18,18,0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
+  box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
+  -webkit-transition: background 0.3s, backdrop-filter 0.3s;
+  -moz-transition: background 0.3s, backdrop-filter 0.3s;
+  -o-transition: background 0.3s, backdrop-filter 0.3s;
+  -ms-transition: background 0.3s, backdrop-filter 0.3s;
+  transition: background 0.3s, backdrop-filter 0.3s;
 }
 [data-theme='dark'] #post-comment .comment-switch {
   background: #2c2c2c !important;
