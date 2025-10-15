@@ -3,11 +3,11 @@
   <title>未似风不息</title>
   
   <subtitle>学习技术 分享生活</subtitle>
-  <link href="https://www.weisifengbuxi.top/atom.xml" rel="self"/>
+  <link href="https://blog.weisifengbuxi.top/atom.xml" rel="self"/>
   
-  <link href="https://www.weisifengbuxi.top/"/>
-  <updated>2025-10-04T09:30:17.249Z</updated>
-  <id>https://www.weisifengbuxi.top/</id>
+  <link href="https://blog.weisifengbuxi.top/"/>
+  <updated>2025-10-15T09:19:23.786Z</updated>
+  <id>https://blog.weisifengbuxi.top/</id>
   
   <author>
     <name>未似风不息</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>【学习笔记】计算机组成原理前三讲核心知识点</title>
-    <link href="https://www.weisifengbuxi.top/posts/627a00f2.html"/>
-    <id>https://www.weisifengbuxi.top/posts/627a00f2.html</id>
+    <link href="https://blog.weisifengbuxi.top/posts/627a00f2.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/627a00f2.html</id>
     <published>2025-10-01T08:42:12.000Z</published>
-    <updated>2025-10-04T09:30:17.249Z</updated>
+    <updated>2025-10-15T09:19:23.786Z</updated>
     
     
       
@@ -31,21 +31,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://www.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="图灵机" scheme="https://www.weisifengbuxi.top/tags/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
+    <category term="图灵机" scheme="https://blog.weisifengbuxi.top/tags/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
     
-    <category term="数据表示" scheme="https://www.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
+    <category term="数据表示" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
     
-    <category term="布尔逻辑" scheme="https://www.weisifengbuxi.top/tags/%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91/"/>
+    <category term="布尔逻辑" scheme="https://blog.weisifengbuxi.top/tags/%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91/"/>
     
   </entry>
   
   <entry>
     <title>【学习笔记】递归与链表</title>
-    <link href="https://www.weisifengbuxi.top/posts/3be0a65.html"/>
-    <id>https://www.weisifengbuxi.top/posts/3be0a65.html</id>
+    <link href="https://blog.weisifengbuxi.top/posts/3be0a65.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/3be0a65.html</id>
     <published>2025-09-23T08:14:41.000Z</published>
     <updated>2025-10-02T17:42:46.825Z</updated>
     
@@ -57,25 +57,25 @@
     
     
     
-    <category term="学习笔记" scheme="https://www.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="笔记" scheme="https://www.weisifengbuxi.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="笔记" scheme="https://blog.weisifengbuxi.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="链表" scheme="https://www.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    <category term="链表" scheme="https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/"/>
     
-    <category term="递归" scheme="https://www.weisifengbuxi.top/tags/%E9%80%92%E5%BD%92/"/>
+    <category term="递归" scheme="https://blog.weisifengbuxi.top/tags/%E9%80%92%E5%BD%92/"/>
     
-    <category term="数据结构" scheme="https://www.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>数学建模经历以及获奖建议</title>
-    <link href="https://www.weisifengbuxi.top/posts/ef6a5850.html"/>
-    <id>https://www.weisifengbuxi.top/posts/ef6a5850.html</id>
+    <link href="https://blog.weisifengbuxi.top/posts/ef6a5850.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/ef6a5850.html</id>
     <published>2025-09-10T09:14:41.000Z</published>
-    <updated>2025-10-08T18:07:05.773Z</updated>
+    <updated>2025-10-15T09:15:59.076Z</updated>
     
     
       
@@ -85,19 +85,19 @@
     
     
     
-    <category term="比赛" scheme="https://www.weisifengbuxi.top/categories/%E6%AF%94%E8%B5%9B/"/>
+    <category term="比赛" scheme="https://blog.weisifengbuxi.top/categories/%E6%AF%94%E8%B5%9B/"/>
     
     
-    <category term="数学建模" scheme="https://www.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    <category term="数学建模" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
     
-    <category term="LaTex" scheme="https://www.weisifengbuxi.top/tags/LaTex/"/>
+    <category term="LaTex" scheme="https://blog.weisifengbuxi.top/tags/LaTex/"/>
     
   </entry>
   
   <entry>
     <title>科目二没过给我的反思</title>
-    <link href="https://www.weisifengbuxi.top/posts/74bcc131.html"/>
-    <id>https://www.weisifengbuxi.top/posts/74bcc131.html</id>
+    <link href="https://blog.weisifengbuxi.top/posts/74bcc131.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/74bcc131.html</id>
     <published>2025-08-10T09:14:41.000Z</published>
     <updated>2025-09-27T11:40:14.997Z</updated>
     
@@ -109,19 +109,19 @@
     
     
     
-    <category term="生活日常" scheme="https://www.weisifengbuxi.top/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
+    <category term="生活日常" scheme="https://blog.weisifengbuxi.top/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
     
     
-    <category term="生活" scheme="https://www.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://blog.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="科目二" scheme="https://www.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/"/>
+    <category term="科目二" scheme="https://blog.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.weisifengbuxi.top/posts/4a17b156.html"/>
-    <id>https://www.weisifengbuxi.top/posts/4a17b156.html</id>
+    <link href="https://blog.weisifengbuxi.top/posts/4a17b156.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/4a17b156.html</id>
     <published>2025-07-10T09:14:41.000Z</published>
     <updated>2025-09-27T11:40:12.511Z</updated>
     
@@ -134,7 +134,7 @@
     
     
     
-    <category term="Hello World" scheme="https://www.weisifengbuxi.top/tags/Hello-World/"/>
+    <category term="Hello World" scheme="https://blog.weisifengbuxi.top/tags/Hello-World/"/>
     
   </entry>
   

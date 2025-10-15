@@ -56,7 +56,7 @@
 <li><strong>论文排版</strong>：推荐使用<mark class="hl-label blue">LaTeX</mark> </li>
 <li><strong>论文参考文献</strong>：<mark class="hl-label blue">BibTeX</mark> 等 </li>
 </ul>
-<p>另外为新手推荐<a href="https://www.weisifengbuxi.top/posts/8ed9156c.html">数模资料</a></p>
+<p>另外为新手推荐<a href="https://blog.weisifengbuxi.top/posts/8ed9156c.html">数模资料</a></p>
 <h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><p>由于比赛要求论文格式为 pdf，因此推荐使用 latex 编辑器<strong>TeXstuio</strong>，网上有不少安装教程，例如<a href="https://zhuanlan.zhihu.com/p/1921310237857648721">TeXstudio 安装</a>，如果觉得安装时间过长的话（大约 40 分钟），那么可以考虑使用 <a href="https://cn.overleaf.com/">Overleaf</a>来写论文， <strong>Overleaf</strong>是一个支持多人同时编辑的在线 LaTeX 编辑器。</p>
 <p>利用 LaTeX 运行后直接生成 <strong>pdf 文件</strong>，因此不必再将其他格式文件转成 pdf 格式。</p>
 <ul>
@@ -296,7 +296,19 @@ UML图
 <li>一个有限的指令表</li>
 </ul>
 <p><a href="http://www.aturingmachine.com">详细介绍</a></p>
-<p><a href="https://math.hws.edu/eck/js/turing-machine/TM.html">Turing Machine Simulator（图灵机模拟器）</a></p>
+<div calss="anzhiyu-tag-link"><a class="tag-Link" target="_blank" href="https://math.hws.edu/eck/js/turing-machine/TM.html">
+    <div class="tag-link-tips">引用站外地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" style="">
+          <i class="anzhiyufont anzhiyu-icon-link" style=""></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Turing Machine Simulator（图灵机模拟器）</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div>
 <h3 id="通用图灵机"><a href="#通用图灵机" class="headerlink" title="通用图灵机"></a>通用图灵机</h3><p><strong>通用图灵机（Universal Turing Machine）</strong>，能够<strong>模拟</strong>其他所有的图灵机。</p>
 <ul>
 <li>输入：数据 + 计算描述（图灵机）</li>
@@ -327,7 +339,19 @@ UML图
 <li>数据操作数从内存中获取到 CPU 内部的寄存器中</li>
 <li>ALU 执行指令并将结果放入寄存器或内存中</li>
 </ol>
-<p><a href="https://vnmsim.c2r0b.ovh/en-us">Von Neumann Machine Simulator（冯·诺依曼机器模拟机）</a></p>
+<div calss="anzhiyu-tag-link"><a class="tag-Link" target="_blank" href="https://vnmsim.c2r0b.ovh/en-us">
+    <div class="tag-link-tips">引用站外地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" style="">
+          <i class="anzhiyufont anzhiyu-icon-link" style=""></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">Von Neumann Machine Simulator（冯·诺依曼机器模拟机）</div>
+            <div class="tag-link-sitename"></div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div>
 <h3 id="冯·诺依曼瓶颈"><a href="#冯·诺依曼瓶颈" class="headerlink" title="冯·诺依曼瓶颈"></a>冯·诺依曼瓶颈</h3><p><strong>冯·诺依曼瓶颈（The Von Neumann Bottleneck）</strong></p>
 <ul>
 <li>CPU 和内存是分开的</li>

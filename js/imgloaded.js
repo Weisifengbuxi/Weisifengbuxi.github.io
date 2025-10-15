@@ -100,10 +100,10 @@
   };
 
   const config = {
-    smallSrc: 'https://s21.ax1x.com/2025/08/26/pVyDGp6.jpg', // 小图链接 尽可能配置小于100k的图片
-    largeSrc: 'https://s21.ax1x.com/2025/08/26/pVyDGp6.jpg', // 大图链接 最终显示的图片
-    mobileSmallSrc: 'https://s21.ax1x.com/2025/08/26/pVyDGp6.jpg', // 手机端小图链接
-    mobileLargeSrc: 'https://s21.ax1x.com/2025/08/26/pVyDGp6.jpg', // 手机端大图链接
+    smallSrc: '/img/background.jpg', // 小图链接 尽可能配置小于100k的图片
+    largeSrc: '/img/background.jpg', // 大图链接 最终显示的图片
+    mobileSmallSrc: '/img/background.jpg', // 手机端小图链接
+    mobileLargeSrc: '/img/background.jpg', // 手机端大图链接
     enableRoutes: ['/'],
   };
 
