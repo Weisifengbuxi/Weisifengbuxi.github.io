@@ -126,34 +126,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【学习笔记】链表、栈、队列的实现方法</title>
-    <url>/posts/6650a8f9.html</url>
-    <content><![CDATA[<div id="postchat_postcontent"><p><strong>链表（Linked List）</strong>、<strong>栈（Stack）</strong>、<strong>队列（Queue）</strong>是数据结构中最基础的三大结构（还有一个是数组）。<strong>熟悉并掌握</strong>数据结构和算法是合格程序员基本功之一，不同的结构在不同的应用场景中往往会带来不一样的<strong>处理效率</strong>。之前文章中已经介绍了链表，本文将介绍栈和队列，以及这三种结构的<strong>实现方法</strong>。</p>
-<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p><strong>栈（stack）</strong>又名<strong>堆栈</strong>，它是一种运算受限的<strong>线性表</strong>。限定仅在<strong>表尾</strong>进行插入和删除操作的线性表。这一端被称为<strong>栈顶</strong>，相对地，把另一端称为<strong>栈底</strong>。向一个栈插入新元素又称作<strong>进栈</strong>、<strong>入栈</strong>或<strong>压栈</strong>，它是把新元素放到<strong>栈顶元素</strong>的上面，使之成为新的栈顶元素；从一个栈删除元素又称作<strong>出栈</strong>或<strong>退栈</strong>，它是把栈顶元素删除掉，使其<strong>相邻的元素</strong>成为新的栈顶元素。</p>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian6.png"/></div></div>
-<div style="text-align: center;">
-
-栈 示意图
-</div>
-
-<p>栈，通俗地说，就像我们往一个杯子里面放东西一样，先放进去的放在最下面，只有把上面的东西拿出来后才能拿出下面压着的东西。</p>
-<p>栈，具有很多用处，计算机中很多处理都是通过栈这种数据结构来进行的，比如<strong>算术运算</strong>，准备两个栈，一个栈存储<strong>数字</strong>，一个栈存储<strong>符号</strong>，从头开始依次把字符<strong>对应</strong>压入到这两个栈中，当所有字符都放入栈之后，<strong>依次</strong>从数字栈中取出两个元素，并从<strong>符号栈</strong>中取出一个元素，进行计算，结果压回<strong>数字栈</strong>，继续以此运行，直到符号栈为空，或者数字栈只剩下一个元素为止，弹出这个数字即为<strong>最后的结果</strong>。</p>
-<p>这么说很抽象，后面以实际题目进行讲解。</p>
-<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>可以用数组（连续的内存空间，按索引取值）来实现栈。</p>
-<p>栈的基本方法只有两个，分别为入栈（Push）元素和出栈（Pop）。</p>
-<p>以 <code>Lab3</code> 作为例题，题目如下：</p>
-</div>]]></content>
-      <categories>
-        <category>代码学习</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-        <tag>链表</tag>
-        <tag>栈</tag>
-        <tag>队列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【学习笔记】递归与链表</title>
     <url>/posts/3be0a65.html</url>
     <content><![CDATA[<div id="postchat_postcontent"><p><strong>数据结构和算法分析（Data Structures and Algorithm Analysis）</strong> 的第一节课是回顾之前所学的<strong>递归（Recursion）</strong>，作为导入课的同时还可以简单复习一下 java（这门课所使用语言）。因此第一周的课程和 lab 不算难，以下是 Lab 的具体细节。</p>
@@ -658,6 +630,34 @@ ASCII码对照表
         <tag>图灵机</tag>
         <tag>数据表示</tag>
         <tag>布尔逻辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【学习笔记】链表、栈、队列的实现方法</title>
+    <url>/posts/6650a8f9.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p><strong>链表（Linked List）</strong>、<strong>栈（Stack）</strong>、<strong>队列（Queue）</strong>是数据结构中最基础的三大结构（还有一个是数组）。<strong>熟悉并掌握</strong>数据结构和算法是合格程序员基本功之一，不同的结构在不同的应用场景中往往会带来不一样的<strong>处理效率</strong>。之前文章中已经介绍了链表，本文将介绍栈和队列，以及这三种结构的<strong>实现方法</strong>。</p>
+<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p><strong>栈（stack）</strong>又名<strong>堆栈</strong>，它是一种运算受限的<strong>线性表</strong>。限定仅在<strong>表尾</strong>进行插入和删除操作的线性表。这一端被称为<strong>栈顶</strong>，相对地，把另一端称为<strong>栈底</strong>。向一个栈插入新元素又称作<strong>进栈</strong>、<strong>入栈</strong>或<strong>压栈</strong>，它是把新元素放到<strong>栈顶元素</strong>的上面，使之成为新的栈顶元素；从一个栈删除元素又称作<strong>出栈</strong>或<strong>退栈</strong>，它是把栈顶元素删除掉，使其<strong>相邻的元素</strong>成为新的栈顶元素。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian6.png"/></div></div>
+<div style="text-align: center;">
+
+栈 示意图
+</div>
+
+<p>栈，通俗地说，就像我们往一个杯子里面放东西一样，先放进去的放在最下面，只有把上面的东西拿出来后才能拿出下面压着的东西。</p>
+<p>栈，具有很多用处，计算机中很多处理都是通过栈这种数据结构来进行的，比如<strong>算术运算</strong>，准备两个栈，一个栈存储<strong>数字</strong>，一个栈存储<strong>符号</strong>，从头开始依次把字符<strong>对应</strong>压入到这两个栈中，当所有字符都放入栈之后，<strong>依次</strong>从数字栈中取出两个元素，并从<strong>符号栈</strong>中取出一个元素，进行计算，结果压回<strong>数字栈</strong>，继续以此运行，直到符号栈为空，或者数字栈只剩下一个元素为止，弹出这个数字即为<strong>最后的结果</strong>。</p>
+<p>这么说很抽象，后面以实际题目进行讲解。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>可以用数组（连续的内存空间，按索引取值）来实现栈。</p>
+<p>栈的基本方法只有两个，分别为入栈（Push）元素和出栈（Pop）。</p>
+<p>以 <code>Lab3</code> 作为例题，题目如下：</p>
+</div>]]></content>
+      <categories>
+        <category>代码学习</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>链表</tag>
+        <tag>栈</tag>
+        <tag>队列</tag>
       </tags>
   </entry>
 </search>
