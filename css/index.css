@@ -12240,6 +12240,37 @@ h1.page-title + .tag-cloud-list {
     visibility: hidden;
   }
 }
+.post-meta-commentcount {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0 8px;
+  height: 28px;
+  line-height: 28px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  color: var(--light-grey);
+  text-decoration: none;
+}
+.post-meta-commentcount:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--light-grey);
+  text-decoration: none;
+}
 @-moz-keyframes move-forever {
   0% {
     -webkit-transform: translate3d(-90px, 0, 0);
