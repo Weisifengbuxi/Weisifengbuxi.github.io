@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="/RSS/atom.xsl" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>未似风不息</title>
+  
+  <subtitle>学习技术 分享生活</subtitle>
+  <link href="https://blog.weisifengbuxi.top/atom.xml" rel="self"/>
+  
+  <link href="https://blog.weisifengbuxi.top/"/>
+  <updated>2025-10-22T08:22:37.648Z</updated>
+  <id>https://blog.weisifengbuxi.top/</id>
+  
+  <author>
+    <name>未似风不息</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【学习笔记】逻辑门电路</title>
+    <link href="https://blog.weisifengbuxi.top/posts/7b8c168a.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/7b8c168a.html</id>
+    <published>2025-10-21T16:29:00.000Z</published>
+    <updated>2025-10-22T08:22:37.648Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;下周一要考试</summary>
+      
+    
+    
+    
+    <category term="代码学习" scheme="https://blog.weisifengbuxi.top/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="JAVA" scheme="https://blog.weisifengbuxi.top/tags/JAVA/"/>
+    
+    <category term="链表" scheme="https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="栈" scheme="https://blog.weisifengbuxi.top/tags/%E6%A0%88/"/>
+    
+    <category term="队列" scheme="https://blog.weisifengbuxi.top/tags/%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【学习笔记】链表、栈、队列的实现方法</title>
+    <link href="https://blog.weisifengbuxi.top/posts/6650a8f9.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/6650a8f9.html</id>
+    <published>2025-10-15T13:30:00.000Z</published>
+    <updated>2025-10-17T16:52:22.416Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="代码学习" scheme="https://blog.weisifengbuxi.top/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="JAVA" scheme="https://blog.weisifengbuxi.top/tags/JAVA/"/>
+    
+    <category term="链表" scheme="https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="栈" scheme="https://blog.weisifengbuxi.top/tags/%E6%A0%88/"/>
+    
+    <category term="队列" scheme="https://blog.weisifengbuxi.top/tags/%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【学习笔记】计算机组成原理前三讲核心知识点</title>
+    <link href="https://blog.weisifengbuxi.top/posts/627a00f2.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/627a00f2.html</id>
+    <published>2025-10-01T08:42:12.000Z</published>
+    <updated>2025-10-17T16:52:22.429Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://blog.weisifengbuxi.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="图灵机" scheme="https://blog.weisifengbuxi.top/tags/%E5%9B%BE%E7%81%B5%E6%9C%BA/"/>
+    
+    <category term="数据表示" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
+    
+    <category term="布尔逻辑" scheme="https://blog.weisifengbuxi.top/tags/%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【学习笔记】递归与链表</title>
+    <link href="https://blog.weisifengbuxi.top/posts/3be0a65.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/3be0a65.html</id>
+    <published>2025-09-23T08:14:41.000Z</published>
+    <updated>2025-10-17T16:52:22.420Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="代码学习" scheme="https://blog.weisifengbuxi.top/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="JAVA" scheme="https://blog.weisifengbuxi.top/tags/JAVA/"/>
+    
+    <category term="链表" scheme="https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="递归" scheme="https://blog.weisifengbuxi.top/tags/%E9%80%92%E5%BD%92/"/>
+    
+    <category term="数据结构" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数学建模经历以及获奖建议</title>
+    <link href="https://blog.weisifengbuxi.top/posts/ef6a5850.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/ef6a5850.html</id>
+    <published>2025-09-10T09:14:41.000Z</published>
+    <updated>2025-10-17T16:52:13.175Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;2025 年</summary>
+      
+    
+    
+    
+    <category term="比赛" scheme="https://blog.weisifengbuxi.top/categories/%E6%AF%94%E8%B5%9B/"/>
+    
+    
+    <category term="数学建模" scheme="https://blog.weisifengbuxi.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    <category term="LaTex" scheme="https://blog.weisifengbuxi.top/tags/LaTex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科目二没过给我的反思</title>
+    <link href="https://blog.weisifengbuxi.top/posts/74bcc131.html"/>
+    <id>https://blog.weisifengbuxi.top/posts/74bcc131.html</id>
+    <published>2025-08-10T09:14:41.000Z</published>
+    <updated>2025-10-17T16:52:22.425Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div id=&quot;postchat_postcontent&quot;&gt;&lt;p&gt;8月8号考的</summary>
+      
+    
+    
+    
+    <category term="生活日常" scheme="https://blog.weisifengbuxi.top/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="生活" scheme="https://blog.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="科目二" scheme="https://blog.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/"/>
+    
+  </entry>
+  
+</feed>

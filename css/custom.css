@@ -1,0 +1,323 @@
+/* 主题色变量定义 */
+:root {
+    --theme-color-light: #FF4081; /* 浅背景用色 */
+    --theme-color-dark: #00FFFF; /* 深背景用色 */
+    --theme-color: var(--theme-color-dark); /* 默认深色模式 */
+}
+
+/* 深色模式切换 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-color: var(--theme-color-dark);
+    }
+}
+
+[data-theme="dark"] {
+    --theme-color: var(--theme-color-dark);
+}
+
+[data-theme="light"] {
+    --theme-color: var(--theme-color-light);
+}
+
+/* 页脚与头图透明 */
+body #footer,
+body #page-header {
+    background: transparent;
+}
+
+body #footer::before,
+body #page-header::before {
+    background: transparent;
+}
+
+[data-theme="dark"] body #footer::before,
+[data-theme="dark"] body #page-header::before {
+    background: transparent;
+}
+
+/* 文字渐变动画 */
+#site-name,
+#site-title,
+#site-subtitle,
+#post-info,
+.author-info__name,
+.author-info__description {
+    transition: text-shadow 1s linear !important;
+}
+
+/* 鼠标样式（保留） */
+#cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: var(--theme-color-dark);
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 10086;
+    pointer-events: none;
+    transition: background 0.01s ease-in-out,
+    opacity 0.01s ease-in-out,
+    transform 0.1s ease-in-out;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#cursor.hidden {
+    opacity: 0;
+}
+
+#cursor.hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(2.5);
+}
+
+#cursor.active {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* 修复：限制风车图标仅在文章内容区显示 */
+/* 使用更精确的选择器，避免影响侧边栏 */
+#article-container .post-content h1::before,
+#article-container .post-content h2::before,
+#article-container .post-content h3::before,
+#article-container .post-content h4::before,
+#article-container .post-content h5::before,
+#article-container .post-content h6::before {
+    /*font-family: "Font Awesome 6 Free";*/
+    content: "\f863"; /* 风车图标 */
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: -1.2em;
+    width: 1em;
+    animation: windmill 1.6s linear infinite;
+}
+
+/* 风车顺时针旋转动画 */
+@keyframes windmill {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 标题hover时的动画 */
+#article-container .post-content h1:hover::before,
+#article-container .post-content h2:hover::before,
+#article-container .post-content h3:hover::before,
+#article-container .post-content h4:hover::before,
+#article-container .post-content h5:hover::before,
+#article-container .post-content h6:hover::before {
+    color: #3b70fc;
+    animation: windmill 3.2s linear infinite;
+}
+
+/* 各标题图标样式微调 */
+#article-container .post-content h1::before {
+    color: #ef50a8;
+    font-size: 1.3rem;
+}
+
+#article-container .post-content h2::before {
+    color: #fb7061;
+    font-size: 1.1rem;
+}
+
+#article-container .post-content h3::before {
+    color: #ffbf00;
+    font-size: 0.95rem;
+}
+
+#article-container .post-content h4::before {
+    color: #a9e000;
+    font-size: 0.8rem;
+}
+
+#article-container .post-content h5::before {
+    color: #57c850;
+    font-size: 0.7rem;
+}
+
+#article-container .post-content h6::before {
+    color: #5ec1e0;
+    font-size: 0.66rem;
+}
+
+/* 标题hover效果 */
+.post-content h1:hover,
+.post-content h2:hover,
+.post-content h3:hover,
+.post-content h4:hover,
+.post-content h5:hover,
+.post-content h6:hover {
+    color: #3b70fc;
+}
+
+/* 修复：右侧设置按钮动画（固定尺寸避免跳动） */
+#rightside_config i.fas.fa-cog.fa-spin {
+    animation: fa-spin 5s linear infinite;
+    width: 24px; /* 固定宽度 */
+    height: 24px; /* 固定高度 */
+    display: inline-block; /* 确保尺寸生效 */
+    box-sizing: border-box; /* 防止边框影响尺寸 */
+}
+
+/* 优化：导航条过渡效果（仅影响颜色不影响布局） */
+#rightside, .rightside-item {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.4) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.4) 75%,
+            transparent 75%,
+            transparent
+    );
+    border-radius: 2em;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.1);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* Firefox滚动条支持 */
+@supports (scrollbar-width: thin) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--theme-color) rgba(73, 177, 245, 0.2);
+    }
+
+    [data-theme="dark"] * {
+        scrollbar-color: var(--theme-color) rgba(73, 177, 245, 0.1);
+    }
+}
+
+/* 文本选中样式 */
+::selection {
+    color: #fff;
+    background-color: var(--theme-color);
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: var(--theme-color);
+}
+
+
+#poem_sentence {
+    font-size: 15px; /* 与朝代保持一致或稍大，如17px */
+}
+
+/* 调整朝代（年份）字体大小 */
+#poem_dynasty {
+    font-size: 14px; /* 数值越大字体越大，可根据需求修改（如18px） */
+}
+
+/* 调整作者及作品名字体大小 */
+#poem_author {
+    font-size: 14px; /* 与朝代保持一致或稍大，如17px */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 恢复 Twikoo 预览按钮显示 */
+#twikoo .tk-comments .el-button.tk-preview {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+#twikoo .tk-comments .el-button.tk-preview:hover {
+    opacity: 0.85 !important;
+}
+
+#twikoo .tk-comments .el-button.tk-preview {
+    position: absolute;
+    top: -40px;
+    right: 107px;
+    opacity: 0.3;
+}
+
+#twikoo .tk-comments .el-button--primary {
+    color: var(--anzhiyu-card-bg);
+    box-shadow: var(--anzhiyu-shadow-black);
+    width: 6.25rem;
+    position: absolute;
+    top: -41px;
+    right: 0px;
+    height: 32px;
+    margin-left: 0.5rem !important;
+    border-color: var(--anzhiyu-fontcolor);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#twikoo .tk-comments .tk-meta-input {
+    position: relative;
+    margin-top: 8px;
+    width: calc(100% - 165px);
+}
+
+.status-tag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 3px;
+    border-radius: 6px 0 12px 0;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+    transition: font-size .3s ease-out, opacity .3s ease-out;
+}
+
+.flink-list-item:hover .status-tag {
+    font-size: 0;
+    opacity: 0;
+}
+
+.status-tag-green {
+    background-color: #599e0b;
+}
+
+.status-tag-light-yellow {
+    background-color: #fed101;
+}
+
+.status-tag-dark-yellow {
+    background-color: #f0b606;
+}
+
+.status-tag-red {
+    background-color: #b90000;
+}
+
+
