@@ -4,7 +4,7 @@
   <url>
     <loc>https://blog.weisifengbuxi.top/posts/7b8c168a.html</loc>
     
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -328,14 +328,14 @@
   </url>
   
   <url>
-    <loc>https://blog.weisifengbuxi.top/tags/JAVA/</loc>
+    <loc>https://blog.weisifengbuxi.top/tags/%E9%80%BB%E8%BE%91%E9%97%A8/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/</loc>
+    <loc>https://blog.weisifengbuxi.top/tags/%E7%94%B5%E8%B7%AF/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -350,6 +350,20 @@
   
   <url>
     <loc>https://blog.weisifengbuxi.top/tags/%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.weisifengbuxi.top/tags/JAVA/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.weisifengbuxi.top/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -387,6 +401,13 @@
   
   <url>
     <loc>https://blog.weisifengbuxi.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.weisifengbuxi.top/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
