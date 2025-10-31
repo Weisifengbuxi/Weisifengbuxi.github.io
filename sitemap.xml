@@ -325,20 +325,6 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2025-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/</loc>
-    <lastmod>2025-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weisifengbuxi.top/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,6 +340,20 @@
   
   <url>
     <loc>https://www.weisifengbuxi.top/tags/CDN%E5%8A%A0%E9%80%9F/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weisifengbuxi.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -474,14 +474,14 @@
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/%E7%A6%8F%E5%88%A9/</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weisifengbuxi.top/categories/%E7%A6%8F%E5%88%A9/</loc>
+    <loc>https://www.weisifengbuxi.top/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
