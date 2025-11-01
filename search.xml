@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数学建模经历以及获奖建议</title>
+    <url>/posts/ef6a5850.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p>2025 年的全国大学生数学建模比赛（CUMCM）已经落下帷幕。以下是博主的比赛经历。</p>
+<h2 id="比赛规则"><a href="#比赛规则" class="headerlink" title="比赛规则"></a>比赛规则</h2><ul>
+<li><strong>三人</strong>为一对，分别担任<strong>建模手</strong>，<strong>编程手</strong>和<strong>论文手</strong></li>
+<li>选择一组题目，解决对应问题并上传。通常包含<strong>一篇论文（PDF 格式）以及支撑材料（压缩文件）</strong></li>
+</ul>
+<h2 id="数学建模竞赛的基本流程"><a href="#数学建模竞赛的基本流程" class="headerlink" title="数学建模竞赛的基本流程"></a>数学建模竞赛的基本流程</h2><ul>
+<li>由<strong>建模手</strong>将问题转化为<strong>数学模型</strong></li>
+<li>由<strong>编程手</strong>根据<strong>数学模型</strong>编写<strong>程序代码</strong></li>
+<li>将<strong>数据</strong>输入<strong>程序</strong>，得到<strong>结果</strong></li>
+<li>由<strong>论文手</strong>将<strong>问题</strong>、<strong>数学模型</strong>、<strong>结果</strong>整理成<strong>论文</strong></li>
+<li><strong>论文</strong>与<strong>程序代码</strong>构成问题最终的<strong>解决方案</strong></li>
+</ul>
+<p>这里引用<a href="https://blog.marquis.eu.org/posts/65f5385a/">小嗷犬</a>的图片来解释<br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/jianmo1.png"/></div></div><br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/jianmo2.png"/></div></div></p>
+<h2 id="数学建模竞赛详细介绍"><a href="#数学建模竞赛详细介绍" class="headerlink" title="数学建模竞赛详细介绍"></a>数学建模竞赛详细介绍</h2><p><strong>全国大学生数学建模竞赛</strong>，以下简称<strong>国赛</strong>，是<strong>中国规模最大的数学建模竞赛</strong>，也是<strong>世界上规模最大的数学建模竞赛</strong>。参加比赛不仅可以能<strong>增长见识</strong>，如果能获奖，则该奖项可以被写在<strong>履历</strong>中来丰富自己的<strong>学术经历</strong>。</p>
+<p>以今年（2025）国赛 广东赛区为例：</p>
+<ul>
+<li><strong>比赛时间</strong>：九月四号下午六点开赛，到九月七号晚上八点截止</li>
+<li><strong>比赛时长</strong>：3 天</li>
+<li><strong>报名费用</strong>：100 元 / 人</li>
+<li><strong>比赛语言</strong>：中文</li>
+<li><strong>比赛题目</strong>：ABCDE 五组题目，本科生只能选择 ABC 组题目，专科生可以选择 ABCDE 题目</li>
+<li><strong>比赛奖项</strong>：<ul>
+<li><strong>国家级</strong>：一等奖、二等奖</li>
+<li><strong>省级</strong>：一等奖、二等奖、三等奖</li>
+<li><strong>赞助商特别奖项</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h2><h3 id="选择队友"><a href="#选择队友" class="headerlink" title="选择队友"></a>选择队友</h3><p>以博主自身经历来看，数学建模比赛的特点是<strong>时间紧</strong>、<strong>任务重</strong>，因此选择队友是非常重要的一步。一个好的队友能在关键时刻起到决定性作用。</p>
+<p>团队分工不一定要十分明确，例如在这次比赛中博主是编程手，但论文是博主使用 latex 生成的。论文手是博主朋友，他只需将对应内容发给博主即可，而他也帮助博主编写相关程序。建模手则是位女生，她在最后的时候帮助博主寻找合适图片，文献来帮博主分担工作。由此可见，模型构建与算法实现是紧密结合的。三个位置相互帮助才能产出一个好的作品。</p>
+<p>能否完赛，取决于建模手和编程手，建模手和编程手决定了<strong>团队的下限</strong>；能否拿奖，取决于论文手，论文手决定了<strong>团队的上限</strong>。因为评委老师一开始只能看到你的论文。因此论文的<strong>美观程度</strong>对于评委影响是十分巨大的。</p>
+<h2 id="知识储备"><a href="#知识储备" class="headerlink" title="知识储备"></a>知识储备</h2><p>因为博主是论文手，因此本文主要从论文手角度分析其所需要的的知识储备：</p>
+<ul>
+<li><strong>论文排版</strong>：推荐使用<mark class="hl-label blue">LaTeX</mark> </li>
+<li><strong>论文参考文献</strong>：<mark class="hl-label blue">BibTeX</mark> 等 </li>
+</ul>
+<p>另外为新手推荐<a href="https://www.weisifengbuxi.top/posts/8ed9156c.html">数模资料</a></p>
+<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><p>由于比赛要求论文格式为 pdf，因此推荐使用 latex 编辑器<strong>TeXstuio</strong>，网上有不少安装教程，例如<a href="https://zhuanlan.zhihu.com/p/1921310237857648721">TeXstudio 安装</a>，如果觉得安装时间过长的话（大约 40 分钟），那么可以考虑使用 <a href="https://cn.overleaf.com/">Overleaf</a>来写论文， <strong>Overleaf</strong>是一个支持多人同时编辑的在线 LaTeX 编辑器。</p>
+<p>利用 LaTeX 运行后直接生成 <strong>pdf 文件</strong>，因此不必再将其他格式文件转成 pdf 格式。</p>
+<ul>
+<li><strong>LaTex</strong>：需要一定的基础，若想要速成则推荐<a href="https://www.bilibili.com/video/BV11h41127FD/?spm_id_from=333.1387.top_right_bar_window_default_collection.content.click&amp;vd_source=49c854c69cd7c0deb0a5c0f5c2535bec">一个非常快速的 Latex 入门教程</a></li>
+<li><strong>LaTex 论文模板</strong>：推荐<a href="https://www.overleaf.com/latex/templates/quan-guo-da-xue-sheng-shu-xue-jian-mo-jing-sai-lun-wen-mo-ban/gfyqvcbzywcm">全国大学生数学建模竞赛论文模板</a></li>
+<li><a href="https://www.geogebra.org/">GeoGebra</a>：几何图、函数图等</li>
+<li><strong>LaTeX 公式编辑器</strong>：<a href="https://latex.codecogs.com/eqneditor/editor.php">LaTeX 公式编辑器 1</a>，或者 <a href="https://www.latexlive.com/">LaTeX 公式编辑器 2</a></li>
+</ul>
+<h2 id="本人经历"><a href="#本人经历" class="headerlink" title="本人经历"></a>本人经历</h2><p>从找队友说起，博主和朋友打算参加比赛。于是在校园墙发布帖子，很快就有人来加微信询问。由于我俩都是计算机专业的，所以最后选择了应用数学专业的同学，她来负责建模。</p>
+<p>由于报名人数太多，学校要求队内没有参加过美赛（美国大学生数学建模竞赛）并且拿 S 奖以上同学的队伍进行模拟比赛。于是博主便开始找关于国赛论文的资料，找到了小嗷犬发布相关模板（做博客的想法也是从那时候开始的）。后面比赛是在家里面做完的，大概看了一下，绝大多数队伍都通过了初选。</p>
+<p>在后面就是学雅思，学车了。其实没怎么学相关知识。只是提前回学校看了看。</p>
+<h2 id="比赛情况"><a href="#比赛情况" class="headerlink" title="比赛情况"></a>比赛情况</h2><p>我们选择的是 A 组题《烟幕干扰弹的投放策略》。一共是有 5 道问题。第一问就是纯物理模型计算，我查找相关论文的时候看到了这个<br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian3.1.png"/></div></div><br>要知道当时比赛也就开始了 2 小时，点进去发现内容和 A 题完全一致的时候我人直接懵了。</p>
+<p>然后建模手开始计算，最后算出答案发现和其他人答案不一样（其他人答案哪来的你别问），就开始改，改了半天还是这个答案。于是启动 GPT-5 最新模型，发现思路没有问题。但答案就是出不来。最后搞到 12 点也没出来，女生说太晚了先睡觉吧。我俩也怕女生熬太久身体扛不住，就只能先宿舍睡觉了。因为三点没有大巴车，我和我朋友又花了 20 分钟走回宿舍。收拾完躺到床上就 2 点了，第一天的建模以信心满满开始，以无解失败告终。</p>
+<p>第二天起来我先写程序，跑了一上午好不容易跑出来并加到论文中去，但第一题还是出不来正确结果。下午我和我朋友坐机房里面分析，突然看到一组数据不太对，然后我俩就问 AI 为什么思路一样数据不对，得到的答案是重力加速度我们 g 取的 10，别人取的 9.8。。。</p>
+<p>那很明显了，初高中的后遗症，经典默认题目会给 g=10m/s^2，这波建模手全责。等第一题搞完第二天都快结束了，然后建模手开始做第二题，这题倒是很快，不过等论文写好已经是凌晨 2 点了，重复昨天的流程。第二天也结束了。</p>
+<p>等起来已经是 11 点了，赶紧吃饭。第三天需要把第三问第四问写出来，不然第四天晚上交很可能来不及。 第三位算出来六点多，和别人的十一点多差的有点大。建模手直接不会了，问 AI，AI 算的也不是这个，第四问也是如此。就这样一直改，改到 3 点最终确定使用一开始的方案，然后回去休息，等他躺床上已经是 5 点了，天都快亮了。</p>
+<p>最后一天我们借助 AI 完成了第五问，把论文的相关内容进行填充，把图片加入文章，找了相关文献，还写了支撑材料。多亏 GPT-5 大人，让我们在 7 点半的时候生成了 MD5 码，并在最后成功上传作品。</p>
+<div class='checkbox times red checked'><input type="checkbox" checked="checked"/>
+            <p>全国大学生数学建模比赛</p>
+            </div>
+<div class='checkbox red checked'><input type="checkbox" checked="checked"/>
+            <p>全国大学生 AI 建模比赛</p>
+            </div>
+<h2 id="作品信息"><a href="#作品信息" class="headerlink" title="作品信息"></a>作品信息</h2><p>我们的作品正文部分共计 23 页，算上附录的代码共 97 页。使用了运动学模型，模拟退火算法，候选策略池和蚁群算法，以及分时分段拼接遮蔽策略。以下是我们论文的部分摘要：</p>
+<p>对于问题一，本文建立了导弹 — 真目标 — 烟幕云团的几何相交判据，将题目中的遮蔽判定为云团中心到视线线段的最小距离不超过 10m，同时在有效窗内离散时间、先粗扫后用二分 Brent 法求出进入与离开遮蔽时刻。接着在运动学计算中将导弹视为匀速飞行，干扰弹视为抛体运动再配合全局时间网格评估最小距离并提取最长连续遮蔽段。最终数值结果给出 τin=2.913s、τout =4.348s，对应有效遮蔽时长∆τ =1.435s。</p>
+<p>对于问题二，建立 “投放 — 起爆 — 下沉” 的运动学模型，在扫描满足 d2 ≤ 100 的最长连续段作为目标函数的同时，也全局时间网格上预计算导弹与视线。在编码时采用遗传算法并且配合核心操作模块，多次重启以提升收敛稳定性。得到最优投放策略：速度 v ≈ 106.82m/s, 航向 θ ≈ 178.46◦, 起爆点 Rburst≈(17451.9,9.4,1753.2)，投放点 Rdrop≈(17769.90,0.73,1800.00)。</p>
+<p>对于问题三，通过优化投放策略，使遮蔽时长最大。我们建立 “导弹恒速直线 — 烟幕云团抛体起爆后下沉” 的运动学模型与 “球 — 视线线段相交” 遮蔽判据，在速度 v = 140m/s、航向 θ = 180◦ 的启发式设定下，采用核心操作模块，最终得出最优遮蔽时长为 6.80s，第一枚投放点与起爆点为 (17800,0,1800) 与 (17310,0,1739.975)，第二枚投放点与起爆点为 (17310,0,1800), 与 (16540,0,1651.775)，第三枚投放点与起爆点 (17030,0,1800) 与 (16190,0,1623.600)。</p>
+<p>对于问题四，构建导弹以 300 米每秒匀速运动、无人机沿等高直线飞行、烟幕先做 “自由落体” 运动，起爆后以 3 米每秒下沉的运动学模型，以便让三枚烟幕的并集有效 遮蔽时长达到最大。借助点到线段距离以及细时间步积分构建精确评估器，在速度 70 至 140 米每秒、投放与延时 0.1 至 10 秒的可行范围内，运用 “候选策略池 + 蚁群算法” 进行全局寻优，以单机严格遮蔽秒数作为启发，并对当代最优解添加信息素以提高收敛效率，数值结果显示：最优方案的并集有效遮蔽总时长为 11.7 秒。</p>
+<p>对于问题五，采用 “分时分段拼接遮蔽” 策略。在构建基于几何逆解的烟幕投放 模型之下，设置导弹与真目标之间的线段为爆点。在各种约束条件包括：速度约束 (70–140m/s)、每架无人机投放间隔 (≥1s)、起爆延时 (0.1–10s) 与云团判据 (半径 10m, 起爆后 20s, 下沉 3m/s) 下优化模型。再设计密集起爆时隙网格、竖直高度离散扫描、半秒级双向时间微调，并采用 “遮蔽最少优先” 的二次补位提升总量。最终得出三导弹遮蔽时长分别为 6.9s、6.8s、3.5s，总计 17.2s。</p>
+<h2 id="最后整活"><a href="#最后整活" class="headerlink" title="最后整活"></a>最后整活</h2><p>一道惊怒的声音响起：“小子，你都做了什么？没有 GPT，我等如何建模？” 只听博主淡然一笑：“很简单，我来建模不就是了”。说罢他的气息不再掩饰，显露而出，建模颠佬！一瞬间，全场又是一寂。众人只听道他口中吟道：<br><div style="text-align: center;"></p>
+<p><strong>灯火通明建模夜，题组如潮案前叠。</strong></p>
+<p><strong>乱麻数据寻规律，模型初构意难决。</strong></p>
+<p><strong>迭代数回终有隙，误差如刺心有泪。</strong></p>
+<p><strong>挑灯再改星渐淡，不肯轻言方案歇。</strong></p>
+<p><strong>初闻建模知路远，仍携纸笔向难前。</strong></p>
+<p><strong>三月磨题身似茧，团队同研影如烟。</strong></p>
+<p><strong>百算千推心似铁，殚精只为构精尖。</strong></p>
+<p><strong>今朝赛场挥毫处，炼数炼模更炼天！</strong></p>
+</div>
+<p>最后，靠着这些经验，第一次参赛拿个省级二等奖是没什么问题的。</p>
+</div>]]></content>
+      <categories>
+        <category>比赛</category>
+      </categories>
+      <tags>
+        <tag>数学建模</tag>
+        <tag>LaTex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>彻底掌握插入排序与归并排序</title>
     <url>/posts/97906df8.html</url>
     <content><![CDATA[<div id="postchat_postcontent"><p><strong>冒泡排序法（Bubble Sort）</strong> 是一种简单的排序算法，它通过重复地遍历待排序的列表，比较相邻的元素并交换它们的位置来实现排序。虽然十分直观，但其时间复杂度达到了 <strong><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.832ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2577.6 1083.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(633,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(2188.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></strong> 在大多数情况下效率较低，尤其是对于大型数据集来说。 此时，<strong>插入排序（Insertion Sort）</strong> 和 <strong>归并排序（Merge Sort）</strong> 提供了更高效的替代方案。本文将详细介绍它们的原理、实现及性能分析，帮助读者彻底掌握这两种排序方法。</p>
@@ -153,131 +242,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数学建模经历以及获奖建议</title>
-    <url>/posts/ef6a5850.html</url>
-    <content><![CDATA[<div id="postchat_postcontent"><p>2025 年的全国大学生数学建模比赛（CUMCM）已经落下帷幕。以下是博主的比赛经历。</p>
-<h2 id="比赛规则"><a href="#比赛规则" class="headerlink" title="比赛规则"></a>比赛规则</h2><ul>
-<li><strong>三人</strong>为一对，分别担任<strong>建模手</strong>，<strong>编程手</strong>和<strong>论文手</strong></li>
-<li>选择一组题目，解决对应问题并上传。通常包含<strong>一篇论文（PDF 格式）以及支撑材料（压缩文件）</strong></li>
-</ul>
-<h2 id="数学建模竞赛的基本流程"><a href="#数学建模竞赛的基本流程" class="headerlink" title="数学建模竞赛的基本流程"></a>数学建模竞赛的基本流程</h2><ul>
-<li>由<strong>建模手</strong>将问题转化为<strong>数学模型</strong></li>
-<li>由<strong>编程手</strong>根据<strong>数学模型</strong>编写<strong>程序代码</strong></li>
-<li>将<strong>数据</strong>输入<strong>程序</strong>，得到<strong>结果</strong></li>
-<li>由<strong>论文手</strong>将<strong>问题</strong>、<strong>数学模型</strong>、<strong>结果</strong>整理成<strong>论文</strong></li>
-<li><strong>论文</strong>与<strong>程序代码</strong>构成问题最终的<strong>解决方案</strong></li>
-</ul>
-<p>这里引用<a href="https://blog.marquis.eu.org/posts/65f5385a/">小嗷犬</a>的图片来解释<br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/jianmo1.png"/></div></div><br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/jianmo2.png"/></div></div></p>
-<h2 id="数学建模竞赛详细介绍"><a href="#数学建模竞赛详细介绍" class="headerlink" title="数学建模竞赛详细介绍"></a>数学建模竞赛详细介绍</h2><p><strong>全国大学生数学建模竞赛</strong>，以下简称<strong>国赛</strong>，是<strong>中国规模最大的数学建模竞赛</strong>，也是<strong>世界上规模最大的数学建模竞赛</strong>。参加比赛不仅可以能<strong>增长见识</strong>，如果能获奖，则该奖项可以被写在<strong>履历</strong>中来丰富自己的<strong>学术经历</strong>。</p>
-<p>以今年（2025）国赛 广东赛区为例：</p>
-<ul>
-<li><strong>比赛时间</strong>：九月四号下午六点开赛，到九月七号晚上八点截止</li>
-<li><strong>比赛时长</strong>：3 天</li>
-<li><strong>报名费用</strong>：100 元 / 人</li>
-<li><strong>比赛语言</strong>：中文</li>
-<li><strong>比赛题目</strong>：ABCDE 五组题目，本科生只能选择 ABC 组题目，专科生可以选择 ABCDE 题目</li>
-<li><strong>比赛奖项</strong>：<ul>
-<li><strong>国家级</strong>：一等奖、二等奖</li>
-<li><strong>省级</strong>：一等奖、二等奖、三等奖</li>
-<li><strong>赞助商特别奖项</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h2><h3 id="选择队友"><a href="#选择队友" class="headerlink" title="选择队友"></a>选择队友</h3><p>以博主自身经历来看，数学建模比赛的特点是<strong>时间紧</strong>、<strong>任务重</strong>，因此选择队友是非常重要的一步。一个好的队友能在关键时刻起到决定性作用。</p>
-<p>团队分工不一定要十分明确，例如在这次比赛中博主是编程手，但论文是博主使用 latex 生成的。论文手是博主朋友，他只需将对应内容发给博主即可，而他也帮助博主编写相关程序。建模手则是位女生，她在最后的时候帮助博主寻找合适图片，文献来帮博主分担工作。由此可见，模型构建与算法实现是紧密结合的。三个位置相互帮助才能产出一个好的作品。</p>
-<p>能否完赛，取决于建模手和编程手，建模手和编程手决定了<strong>团队的下限</strong>；能否拿奖，取决于论文手，论文手决定了<strong>团队的上限</strong>。因为评委老师一开始只能看到你的论文。因此论文的<strong>美观程度</strong>对于评委影响是十分巨大的。</p>
-<h2 id="知识储备"><a href="#知识储备" class="headerlink" title="知识储备"></a>知识储备</h2><p>因为博主是论文手，因此本文主要从论文手角度分析其所需要的的知识储备：</p>
-<ul>
-<li><strong>论文排版</strong>：推荐使用<mark class="hl-label blue">LaTeX</mark> </li>
-<li><strong>论文参考文献</strong>：<mark class="hl-label blue">BibTeX</mark> 等 </li>
-</ul>
-<p>另外为新手推荐<a href="https://www.weisifengbuxi.top/posts/8ed9156c.html">数模资料</a></p>
-<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><p>由于比赛要求论文格式为 pdf，因此推荐使用 latex 编辑器<strong>TeXstuio</strong>，网上有不少安装教程，例如<a href="https://zhuanlan.zhihu.com/p/1921310237857648721">TeXstudio 安装</a>，如果觉得安装时间过长的话（大约 40 分钟），那么可以考虑使用 <a href="https://cn.overleaf.com/">Overleaf</a>来写论文， <strong>Overleaf</strong>是一个支持多人同时编辑的在线 LaTeX 编辑器。</p>
-<p>利用 LaTeX 运行后直接生成 <strong>pdf 文件</strong>，因此不必再将其他格式文件转成 pdf 格式。</p>
-<ul>
-<li><strong>LaTex</strong>：需要一定的基础，若想要速成则推荐<a href="https://www.bilibili.com/video/BV11h41127FD/?spm_id_from=333.1387.top_right_bar_window_default_collection.content.click&amp;vd_source=49c854c69cd7c0deb0a5c0f5c2535bec">一个非常快速的 Latex 入门教程</a></li>
-<li><strong>LaTex 论文模板</strong>：推荐<a href="https://www.overleaf.com/latex/templates/quan-guo-da-xue-sheng-shu-xue-jian-mo-jing-sai-lun-wen-mo-ban/gfyqvcbzywcm">全国大学生数学建模竞赛论文模板</a></li>
-<li><a href="https://www.geogebra.org/">GeoGebra</a>：几何图、函数图等</li>
-<li><strong>LaTeX 公式编辑器</strong>：<a href="https://latex.codecogs.com/eqneditor/editor.php">LaTeX 公式编辑器 1</a>，或者 <a href="https://www.latexlive.com/">LaTeX 公式编辑器 2</a></li>
-</ul>
-<h2 id="本人经历"><a href="#本人经历" class="headerlink" title="本人经历"></a>本人经历</h2><p>从找队友说起，博主和朋友打算参加比赛。于是在校园墙发布帖子，很快就有人来加微信询问。由于我俩都是计算机专业的，所以最后选择了应用数学专业的同学，她来负责建模。</p>
-<p>由于报名人数太多，学校要求队内没有参加过美赛（美国大学生数学建模竞赛）并且拿 S 奖以上同学的队伍进行模拟比赛。于是博主便开始找关于国赛论文的资料，找到了小嗷犬发布相关模板（做博客的想法也是从那时候开始的）。后面比赛是在家里面做完的，大概看了一下，绝大多数队伍都通过了初选。</p>
-<p>在后面就是学雅思，学车了。其实没怎么学相关知识。只是提前回学校看了看。</p>
-<h2 id="比赛情况"><a href="#比赛情况" class="headerlink" title="比赛情况"></a>比赛情况</h2><p>我们选择的是 A 组题《烟幕干扰弹的投放策略》。一共是有 5 道问题。第一问就是纯物理模型计算，我查找相关论文的时候看到了这个<br><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian3.1.png"/></div></div><br>要知道当时比赛也就开始了 2 小时，点进去发现内容和 A 题完全一致的时候我人直接懵了。</p>
-<p>然后建模手开始计算，最后算出答案发现和其他人答案不一样（其他人答案哪来的你别问），就开始改，改了半天还是这个答案。于是启动 GPT-5 最新模型，发现思路没有问题。但答案就是出不来。最后搞到 12 点也没出来，女生说太晚了先睡觉吧。我俩也怕女生熬太久身体扛不住，就只能先宿舍睡觉了。因为三点没有大巴车，我和我朋友又花了 20 分钟走回宿舍。收拾完躺到床上就 2 点了，第一天的建模以信心满满开始，以无解失败告终。</p>
-<p>第二天起来我先写程序，跑了一上午好不容易跑出来并加到论文中去，但第一题还是出不来正确结果。下午我和我朋友坐机房里面分析，突然看到一组数据不太对，然后我俩就问 AI 为什么思路一样数据不对，得到的答案是重力加速度我们 g 取的 10，别人取的 9.8。。。</p>
-<p>那很明显了，初高中的后遗症，经典默认题目会给 g=10m/s^2，这波建模手全责。等第一题搞完第二天都快结束了，然后建模手开始做第二题，这题倒是很快，不过等论文写好已经是凌晨 2 点了，重复昨天的流程。第二天也结束了。</p>
-<p>等起来已经是 11 点了，赶紧吃饭。第三天需要把第三问第四问写出来，不然第四天晚上交很可能来不及。 第三位算出来六点多，和别人的十一点多差的有点大。建模手直接不会了，问 AI，AI 算的也不是这个，第四问也是如此。就这样一直改，改到 3 点最终确定使用一开始的方案，然后回去休息，等他躺床上已经是 5 点了，天都快亮了。</p>
-<p>最后一天我们借助 AI 完成了第五问，把论文的相关内容进行填充，把图片加入文章，找了相关文献，还写了支撑材料。多亏 GPT-5 大人，让我们在 7 点半的时候生成了 MD5 码，并在最后成功上传作品。</p>
-<div class='checkbox times red checked'><input type="checkbox" checked="checked"/>
-            <p>全国大学生数学建模比赛</p>
-            </div>
-<div class='checkbox red checked'><input type="checkbox" checked="checked"/>
-            <p>全国大学生 AI 建模比赛</p>
-            </div>
-<h2 id="作品信息"><a href="#作品信息" class="headerlink" title="作品信息"></a>作品信息</h2><p>我们的作品正文部分共计 23 页，算上附录的代码共 97 页。使用了运动学模型，模拟退火算法，候选策略池和蚁群算法，以及分时分段拼接遮蔽策略。以下是我们论文的部分摘要：</p>
-<p>对于问题一，本文建立了导弹 — 真目标 — 烟幕云团的几何相交判据，将题目中的遮蔽判定为云团中心到视线线段的最小距离不超过 10m，同时在有效窗内离散时间、先粗扫后用二分 Brent 法求出进入与离开遮蔽时刻。接着在运动学计算中将导弹视为匀速飞行，干扰弹视为抛体运动再配合全局时间网格评估最小距离并提取最长连续遮蔽段。最终数值结果给出 τin=2.913s、τout =4.348s，对应有效遮蔽时长∆τ =1.435s。</p>
-<p>对于问题二，建立 “投放 — 起爆 — 下沉” 的运动学模型，在扫描满足 d2 ≤ 100 的最长连续段作为目标函数的同时，也全局时间网格上预计算导弹与视线。在编码时采用遗传算法并且配合核心操作模块，多次重启以提升收敛稳定性。得到最优投放策略：速度 v ≈ 106.82m/s, 航向 θ ≈ 178.46◦, 起爆点 Rburst≈(17451.9,9.4,1753.2)，投放点 Rdrop≈(17769.90,0.73,1800.00)。</p>
-<p>对于问题三，通过优化投放策略，使遮蔽时长最大。我们建立 “导弹恒速直线 — 烟幕云团抛体起爆后下沉” 的运动学模型与 “球 — 视线线段相交” 遮蔽判据，在速度 v = 140m/s、航向 θ = 180◦ 的启发式设定下，采用核心操作模块，最终得出最优遮蔽时长为 6.80s，第一枚投放点与起爆点为 (17800,0,1800) 与 (17310,0,1739.975)，第二枚投放点与起爆点为 (17310,0,1800), 与 (16540,0,1651.775)，第三枚投放点与起爆点 (17030,0,1800) 与 (16190,0,1623.600)。</p>
-<p>对于问题四，构建导弹以 300 米每秒匀速运动、无人机沿等高直线飞行、烟幕先做 “自由落体” 运动，起爆后以 3 米每秒下沉的运动学模型，以便让三枚烟幕的并集有效 遮蔽时长达到最大。借助点到线段距离以及细时间步积分构建精确评估器，在速度 70 至 140 米每秒、投放与延时 0.1 至 10 秒的可行范围内，运用 “候选策略池 + 蚁群算法” 进行全局寻优，以单机严格遮蔽秒数作为启发，并对当代最优解添加信息素以提高收敛效率，数值结果显示：最优方案的并集有效遮蔽总时长为 11.7 秒。</p>
-<p>对于问题五，采用 “分时分段拼接遮蔽” 策略。在构建基于几何逆解的烟幕投放 模型之下，设置导弹与真目标之间的线段为爆点。在各种约束条件包括：速度约束 (70–140m/s)、每架无人机投放间隔 (≥1s)、起爆延时 (0.1–10s) 与云团判据 (半径 10m, 起爆后 20s, 下沉 3m/s) 下优化模型。再设计密集起爆时隙网格、竖直高度离散扫描、半秒级双向时间微调，并采用 “遮蔽最少优先” 的二次补位提升总量。最终得出三导弹遮蔽时长分别为 6.9s、6.8s、3.5s，总计 17.2s。</p>
-<h2 id="最后整活"><a href="#最后整活" class="headerlink" title="最后整活"></a>最后整活</h2><p>一道惊怒的声音响起：“小子，你都做了什么？没有 GPT，我等如何建模？” 只听博主淡然一笑：“很简单，我来建模不就是了”。说罢他的气息不再掩饰，显露而出，建模颠佬！一瞬间，全场又是一寂。众人只听道他口中吟道：<br><div style="text-align: center;"></p>
-<p><strong>灯火通明建模夜，题组如潮案前叠。</strong></p>
-<p><strong>乱麻数据寻规律，模型初构意难决。</strong></p>
-<p><strong>迭代数回终有隙，误差如刺心有泪。</strong></p>
-<p><strong>挑灯再改星渐淡，不肯轻言方案歇。</strong></p>
-<p><strong>初闻建模知路远，仍携纸笔向难前。</strong></p>
-<p><strong>三月磨题身似茧，团队同研影如烟。</strong></p>
-<p><strong>百算千推心似铁，殚精只为构精尖。</strong></p>
-<p><strong>今朝赛场挥毫处，炼数炼模更炼天！</strong></p>
-</div>
-<p>最后，靠着这些经验，第一次参赛拿个省级二等奖是没什么问题的。</p>
-</div>]]></content>
-      <categories>
-        <category>比赛</category>
-      </categories>
-      <tags>
-        <tag>数学建模</tag>
-        <tag>LaTex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科目二没过给我的反思</title>
-    <url>/posts/74bcc131.html</url>
-    <content><![CDATA[<div id="postchat_postcontent"><p>8月8号考的科目二，可惜没过。按理来说应该是没什么问题的，后来想想，确实是我大意了，考前还是不够细致，临阵时候也不够镇定。</p>
-<h2 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h2><p>由于学校原因得学习雅思，从7月14号开始，学到8月3号结束。科目二的练习是在7月15号开始，因为一学就是一天所以雅思结课前我是没法报考科目二的，这也给了我接近20天的时间练车。</p>
-<p>按理来说是没什么问题的，正常情况是学习7天然后开始去总校进行1：1训练（我平时练习的场地没有S弯道，只能去总校练。同时模拟考试流程）。学了20天那我自然很有信心。然而发现科目二报名时间很少，并且8月8号之前的时间全部冲突。没办法只好报这天的。</p>
-<p>然后8月3号当天开始1：1……最重要的第一天就没法去。第二天是手动挡休息，只有自动挡练习，我又没去成…因此我第一次过流程是8月5号，印象很深刻，那天我六点半起的床，7点到分部等车去总部，车上还有练科目三的，他们是半途下车，我第一次去什么也不懂跟着他们就下了车。</p>
-<p>我就感觉不太对劲，一打听才知道没坐到站就下车了。没办法又打了个车去的总部，到了一看队伍排出校门了。最后领卡搞了一个小时才进去。进去坐到座位上接着等，因为人很多（其实人相对其他时间段很少了，但还是一个教练带十来个学员还是很多），等到十点多才叫到我。</p>
-<p>我远远一看，那捷达岁数可能跟我差不多，车上坐了四个人，不知道是教练为了舒服把座位往后调导致我坐得很挤还是那车本来就小，反正腿伸不开很难受。加上教练和车外一个兄弟相互递烟，还不开窗户搞得车上全是烟味，我们后面三个兄弟吸了俩小时二手烟</p>
-<p>完了这教练还直播，让我们打开抖音给他点赞。我一看直播间加上我，加上他管理员老婆一共就4个人。更逆天的是他还要我们给他点到一万赞。。。</p>
-<p>我们点到一万赞他也不直播了，让我们观摩别人怎么找点位，就这样看到十二点半，实在是热的受不了了，我和旁边兄弟也聊熟了，就去吃了个饭。</p>
-<p>一点半的时候就到我了，我就开始第一次练车，一共是四条路线，每条路线跑一次，除了S弯道第一次学，其他我没什么问题，唯一小插曲的是倒车入库，就是教练让我比平时都往后多退一点，这就埋下伏笔了。</p>
-<p>当时肯定不知道么，觉得已经没什么问题了，再来一次可以直接考了</p>
-<p>然后坐在外面开心等第二轮大展身手，教练在里面就再也没消息了。。。</p>
-<p>我和我刚认识的兄弟从两点开始等，边等边睡，睡到4点起来还是没有消息，旁边女生去了都回来了，我们俩都懵了</p>
-<p>就这样继续等，等到五点又让我去，然后跟我说今天没时间了随便挑一条线练一次吧。就这样第一天结束了。</p>
-<p>我想这第一天因为我的问题去得晚了，那第二天早点去呗。确实去的早，不过第二天是模拟，就是一个人在车上练，机器给你算分。当时前面项目都没问题，就是半坡距离把握不准，挂了两次。然后教练讲了讲细节就结束了</p>
-<p>七号按时间表不练，但教练让我们下午去再找找问题，再把问题一解决，我就感觉更没问题了就等8号的考试了。</p>
-<h2 id="考试当天"><a href="#考试当天" class="headerlink" title="考试当天"></a>考试当天</h2><p>我强烈建议大家考科目二的时候，要么早早就去，早到驾校没开门就到了，要么就睡到自然起再去因为人非常多。我七点坐车，到了那里七点五十。排队排到11点半，早知道我就睡好了再去QAQ。</p>
-<p>好不容易排到到我，发现照片跟我本人不一样，是完全不一样那种，我怀疑可能是拍照出问题了，没办法再去拍照。然后就开始考试，</p>
-<p>真的很熟练，右边倒车入库停的非常标准，就是左边的库有点小问题，有点太靠右了，这样来说我就应该不回方向盘，先保证两边距离，再微调使车身正朝前方，我平时遇到过这种情况，也就这样做了没什么问题，然而当我停下来的时候系统突然说车压线，扣我100分。我人直接懵了，当时我应该立刻下车看车是什么情况，但我太自信了，以为是压到两侧的线了，丝毫没想到是后退太多导致车身压住后线了。</p>
-<p>把后面项目做完，明白问题之后手感也来了，自信回到起点打算一雪前耻</p>
-<p>第二次真可以说是行云流水，就是左边的倒车入库，还是一样的问题，还是扣我100分，我这下人彻底懵了。要说是碰到后线，那为什么在右库没提示呢。碰到两边线就跟不可能了，毕竟眼睛一直盯着。那是什么问题呢？我也不知道，就迷迷糊糊把车开回去就结束了。以上说压后线是我的猜测，因为没有照片。直到到我写这篇文章的时候我都不知道到底压了哪根线。</p>
-<p>唯一能给我一点安慰的就是那个跟我关系不错兄弟也没过（不是幸灾乐祸），他情况跟我差不多，是学托福的3号才结束。不过他3号请假来学车了，因此比我多练了一天。他说他考试时候车突然熄火了，然后他挂着档就紧急点火了，直接挂了。第二次是直角拐弯的时候压线了两次全挂。那哥们今年高考，考了691分，去了清华。一想到去清华的学霸和我一样我心里就好受不少（）。</p>
-<h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><p>和我们一起练的还有一个女生，那个女生大四，给我的感觉就是反应有一些慢（没别的意思哈），但是她很努力练，自然而然的过了。对比我和那个兄弟，我俩太自信了，这导致在一些细节上把握不到位，明明在分校练的时候教练就告诉我点位很多次了。但我把1：1教练随意的一句话话当正确的。 完全没想到他当时玩手机很可能没注意看。这一对比就能看出分校带我的吴教练的用心，平时我练习时候他从不看手机，考试当天还在叮嘱我一些细节。</p>
-<p>那个兄弟可能完全没考虑到熄火这种情况，导致后面一步错，步步错。</p>
-<p>这件事其实不大，无非再考一次，但也提醒我<!-- tab --><strong>细节问题出一点差错都是致命的。</strong><!-- endtab -->那个兄弟的错误我也应该避免。以后有些事是没有机会再来一次的，要<!-- tab --><strong>未虑胜，先虑败</strong><!-- endtab -->啊。唉，切记切记！</p>
-</div>]]></content>
-      <categories>
-        <category>生活日常</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>科目二</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>海洋保育户外课见闻</title>
     <url>/posts/cd09154f.html</url>
     <content><![CDATA[<div id="postchat_postcontent"><p>学校要求我们修一门WPE课，也就是水课，内容是关于海洋保育的。导师是梁霜芷。课程安排了一次去淇澳岛红树林自然保护区的户外教学活动，亲身体验海洋保育工作。以下是我这次户外课的一些见闻。</p>
@@ -340,61 +304,39 @@
       </tags>
   </entry>
   <entry>
-    <title>为你的网站添加免费的EdgeOne CDN加速服务</title>
-    <url>/posts/c8bf33e5.html</url>
-    <content><![CDATA[<div id="postchat_postcontent"><p>很多朋友的网站没有购买服务器，因此部署在国外的服务器上，比如Vercel。但由于Vercel 国内被墙了，因此没法使用CDN加速。这使得网站访问速度十分缓慢。</p>
-<p>听说腾讯云有相关免费CDN就去试了一下，没想到居然这么良心，免费套餐就能满足大部分个人站长的需求，而且配置起来也非常简单。分享一下如何为你的网站添加腾讯云CDN加速服务，保护你的网站同时让你的网站访问速度飞起来！</p>
-<p>话不多说，直接上教程。</p>
-<div class="note success no-icon flat"><p>在开始前，你需要注册一个腾讯云的账号（最好实名认证）</p>
-</div>
-<h2 id="将你的网站部署在EdgeOne上"><a href="#将你的网站部署在EdgeOne上" class="headerlink" title="将你的网站部署在EdgeOne上"></a>将你的网站部署在EdgeOne上</h2><p>点击访问该链接<a href="https://console.cloud.tencent.com/edgeone/pages">EdgeOne网站部署</a>，点击创建项目，选择导入Git仓库，这时候你需要将你的网站代码上传到GitHub，再将GitHub仓库地址填写进去，验证。之后选择你的项目进入。</p>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/edgeone1.png"></div></div>
-<p>进入你的项目之后点击开始部署，注意项目中不要有有超过<strong>25MB</strong>的文件，否则会部署失败。</p>
-<h2 id="获得免费套餐资格"><a href="#获得免费套餐资格" class="headerlink" title="获得免费套餐资格"></a>获得免费套餐资格</h2><p>然后你需要先获得免费套餐内测资格，正常有以下几种方式获得（不推荐）：</p>
-<ol>
-<li>在X平台分享</li>
-<li>在 Discord 上赢取兑换码</li>
-<li>GitHub 合作计划</li>
-</ol>
-<div calss="anzhiyu-tag-link"><a class="tag-Link" target="_blank" href="https://edgeone.ai/zh/redemption">
-    <div class="tag-link-tips">引用站外地址</div>
-    <div class="tag-link-bottom">
-        <div class="tag-link-left" style="background-image: url(https://favicon.im/edgeone.ai)">
-          <i class="anzhiyufont anzhiyu-icon-link" style="display: none"></i>
-        </div>
-        <div class="tag-link-right">
-            <div class="tag-link-title">EdgeOne</div>
-            <div class="tag-link-sitename">点击跳转到获取页面</div>
-        </div>
-        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
-    </div>
-    </a></div>
-<p>后两种方法我没试过，在x平台也就是推特，只需要点击立即发布，然后分享一条推文就可以获得免费套餐资格。这是很轻松的，当然如果你没法打开X平台，这里再提供第四种更方法，就是直接点击下面的链接申请免费套餐资格。</p>
-<p>我看其他博主没人说这个方法，就当是本站福利了（笑）。</p>
-<p>点击下方链接</p>
-<p><a href="https://curl.qcloud.com/NjJH9ooG">腾讯云EdgeOne免费套餐申请</a></p>
-<p>选择每周抽兑换码，扫描二维码就可以参与了，这个兑换码每周发两千个，但实际参与人只有不到200个，因此100%能拿到兑换码。</p>
-<h2 id="配置CDN加速"><a href="#配置CDN加速" class="headerlink" title="配置CDN加速"></a>配置CDN加速</h2><p>现在你有了免费套餐资格，接下来就可以配置CDN加速了。</p>
-<p>进入你的<a href="https://console.cloud.tencent.com/edgeone/zones">EdgeOne项目</a>，点击新增站点，点击开始接入即可，之后将你的兑换码兑换个人版免费版即可（只能兑换这个）。</p>
-<p>接下来的配置请根据你的网站实际情况进行配置即可，主要配置以下几个选项：</p>
-<ol>
-<li><strong>站点域名</strong>：填写你的网站域名</li>
-<li><strong>源站配置</strong>：填写你的网站源站地址，如果是从腾讯云购买的域名可以一键配置，否则得用cname配置</li>
-<li><strong>加速区域</strong>：选择全球加速</li>
-<li><strong>协议配置</strong>：建议开启HTTPS，选择自动申请免费证书</li>
-<li><strong>缓存配置</strong>：建议开启静态资源缓存</li>
-<li><strong>防护配置</strong>：这个在免费版中好像不能设置</li>
-</ol>
-<p>如果你是新手第一次配置，可以去看张洪heo大佬的文章<a href="https://blog.zhheo.com/p/5e50rt80.html">腾讯云EdgeOne免费无限量CDN流量，良心到哭了（抽兑换码）</a></p>
-<p>配置完之后效果非常显著。检测访问全国都是深绿色，没有闪电标志，最关键的是长期完全免费的。这次真的得感谢腾讯云，良心到家了！</p>
+    <title>科目二没过给我的反思</title>
+    <url>/posts/74bcc131.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p>8月8号考的科目二，可惜没过。按理来说应该是没什么问题的，后来想想，确实是我大意了，考前还是不够细致，临阵时候也不够镇定。</p>
+<h2 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h2><p>由于学校原因得学习雅思，从7月14号开始，学到8月3号结束。科目二的练习是在7月15号开始，因为一学就是一天所以雅思结课前我是没法报考科目二的，这也给了我接近20天的时间练车。</p>
+<p>按理来说是没什么问题的，正常情况是学习7天然后开始去总校进行1：1训练（我平时练习的场地没有S弯道，只能去总校练。同时模拟考试流程）。学了20天那我自然很有信心。然而发现科目二报名时间很少，并且8月8号之前的时间全部冲突。没办法只好报这天的。</p>
+<p>然后8月3号当天开始1：1……最重要的第一天就没法去。第二天是手动挡休息，只有自动挡练习，我又没去成…因此我第一次过流程是8月5号，印象很深刻，那天我六点半起的床，7点到分部等车去总部，车上还有练科目三的，他们是半途下车，我第一次去什么也不懂跟着他们就下了车。</p>
+<p>我就感觉不太对劲，一打听才知道没坐到站就下车了。没办法又打了个车去的总部，到了一看队伍排出校门了。最后领卡搞了一个小时才进去。进去坐到座位上接着等，因为人很多（其实人相对其他时间段很少了，但还是一个教练带十来个学员还是很多），等到十点多才叫到我。</p>
+<p>我远远一看，那捷达岁数可能跟我差不多，车上坐了四个人，不知道是教练为了舒服把座位往后调导致我坐得很挤还是那车本来就小，反正腿伸不开很难受。加上教练和车外一个兄弟相互递烟，还不开窗户搞得车上全是烟味，我们后面三个兄弟吸了俩小时二手烟</p>
+<p>完了这教练还直播，让我们打开抖音给他点赞。我一看直播间加上我，加上他管理员老婆一共就4个人。更逆天的是他还要我们给他点到一万赞。。。</p>
+<p>我们点到一万赞他也不直播了，让我们观摩别人怎么找点位，就这样看到十二点半，实在是热的受不了了，我和旁边兄弟也聊熟了，就去吃了个饭。</p>
+<p>一点半的时候就到我了，我就开始第一次练车，一共是四条路线，每条路线跑一次，除了S弯道第一次学，其他我没什么问题，唯一小插曲的是倒车入库，就是教练让我比平时都往后多退一点，这就埋下伏笔了。</p>
+<p>当时肯定不知道么，觉得已经没什么问题了，再来一次可以直接考了</p>
+<p>然后坐在外面开心等第二轮大展身手，教练在里面就再也没消息了。。。</p>
+<p>我和我刚认识的兄弟从两点开始等，边等边睡，睡到4点起来还是没有消息，旁边女生去了都回来了，我们俩都懵了</p>
+<p>就这样继续等，等到五点又让我去，然后跟我说今天没时间了随便挑一条线练一次吧。就这样第一天结束了。</p>
+<p>我想这第一天因为我的问题去得晚了，那第二天早点去呗。确实去的早，不过第二天是模拟，就是一个人在车上练，机器给你算分。当时前面项目都没问题，就是半坡距离把握不准，挂了两次。然后教练讲了讲细节就结束了</p>
+<p>七号按时间表不练，但教练让我们下午去再找找问题，再把问题一解决，我就感觉更没问题了就等8号的考试了。</p>
+<h2 id="考试当天"><a href="#考试当天" class="headerlink" title="考试当天"></a>考试当天</h2><p>我强烈建议大家考科目二的时候，要么早早就去，早到驾校没开门就到了，要么就睡到自然起再去因为人非常多。我七点坐车，到了那里七点五十。排队排到11点半，早知道我就睡好了再去QAQ。</p>
+<p>好不容易排到到我，发现照片跟我本人不一样，是完全不一样那种，我怀疑可能是拍照出问题了，没办法再去拍照。然后就开始考试，</p>
+<p>真的很熟练，右边倒车入库停的非常标准，就是左边的库有点小问题，有点太靠右了，这样来说我就应该不回方向盘，先保证两边距离，再微调使车身正朝前方，我平时遇到过这种情况，也就这样做了没什么问题，然而当我停下来的时候系统突然说车压线，扣我100分。我人直接懵了，当时我应该立刻下车看车是什么情况，但我太自信了，以为是压到两侧的线了，丝毫没想到是后退太多导致车身压住后线了。</p>
+<p>把后面项目做完，明白问题之后手感也来了，自信回到起点打算一雪前耻</p>
+<p>第二次真可以说是行云流水，就是左边的倒车入库，还是一样的问题，还是扣我100分，我这下人彻底懵了。要说是碰到后线，那为什么在右库没提示呢。碰到两边线就跟不可能了，毕竟眼睛一直盯着。那是什么问题呢？我也不知道，就迷迷糊糊把车开回去就结束了。以上说压后线是我的猜测，因为没有照片。直到到我写这篇文章的时候我都不知道到底压了哪根线。</p>
+<p>唯一能给我一点安慰的就是那个跟我关系不错兄弟也没过（不是幸灾乐祸），他情况跟我差不多，是学托福的3号才结束。不过他3号请假来学车了，因此比我多练了一天。他说他考试时候车突然熄火了，然后他挂着档就紧急点火了，直接挂了。第二次是直角拐弯的时候压线了两次全挂。那哥们今年高考，考了691分，去了清华。一想到去清华的学霸和我一样我心里就好受不少（）。</p>
+<h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><p>和我们一起练的还有一个女生，那个女生大四，给我的感觉就是反应有一些慢（没别的意思哈），但是她很努力练，自然而然的过了。对比我和那个兄弟，我俩太自信了，这导致在一些细节上把握不到位，明明在分校练的时候教练就告诉我点位很多次了。但我把1：1教练随意的一句话话当正确的。 完全没想到他当时玩手机很可能没注意看。这一对比就能看出分校带我的吴教练的用心，平时我练习时候他从不看手机，考试当天还在叮嘱我一些细节。</p>
+<p>那个兄弟可能完全没考虑到熄火这种情况，导致后面一步错，步步错。</p>
+<p>这件事其实不大，无非再考一次，但也提醒我<!-- tab --><strong>细节问题出一点差错都是致命的。</strong><!-- endtab -->那个兄弟的错误我也应该避免。以后有些事是没有机会再来一次的，要<!-- tab --><strong>未虑胜，先虑败</strong><!-- endtab -->啊。唉，切记切记！</p>
 </div>]]></content>
       <categories>
-        <category>福利</category>
+        <category>生活日常</category>
       </categories>
       <tags>
-        <tag>腾讯云</tag>
-        <tag>EdgeOne</tag>
-        <tag>CDN加速</tag>
+        <tag>生活</tag>
+        <tag>科目二</tag>
       </tags>
   </entry>
   <entry>
@@ -764,6 +706,92 @@ ASCII码对照表
         <tag>图灵机</tag>
         <tag>数据表示</tag>
         <tag>布尔逻辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为你的网站添加免费的EdgeOne CDN加速服务</title>
+    <url>/posts/c8bf33e5.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p>很多朋友的网站没有购买服务器，因此部署在国外的服务器上，比如Vercel。但由于Vercel 国内被墙了，因此没法使用CDN加速。这使得网站访问速度十分缓慢。</p>
+<p>听说腾讯云有相关免费CDN就去试了一下，没想到居然这么良心，免费套餐就能满足大部分个人站长的需求，而且配置起来也非常简单。分享一下如何为你的网站添加腾讯云CDN加速服务，保护你的网站同时让你的网站访问速度飞起来！</p>
+<p>话不多说，直接上教程。</p>
+<div class="note success no-icon flat"><p>在开始前，你需要注册一个腾讯云的账号（最好实名认证）</p>
+</div>
+<h2 id="将你的网站部署在EdgeOne上"><a href="#将你的网站部署在EdgeOne上" class="headerlink" title="将你的网站部署在EdgeOne上"></a>将你的网站部署在EdgeOne上</h2><p>点击访问该链接<a href="https://console.cloud.tencent.com/edgeone/pages">EdgeOne网站部署</a>，点击创建项目，选择导入Git仓库，这时候你需要将你的网站代码上传到GitHub，再将GitHub仓库地址填写进去，验证。之后选择你的项目进入。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/edgeone1.png"></div></div>
+<p>进入你的项目之后点击开始部署，注意项目中不要有有超过<strong>25MB</strong>的文件，否则会部署失败。</p>
+<h2 id="获得免费套餐资格"><a href="#获得免费套餐资格" class="headerlink" title="获得免费套餐资格"></a>获得免费套餐资格</h2><p>然后你需要先获得免费套餐内测资格，正常有以下几种方式获得（不推荐）：</p>
+<ol>
+<li>在X平台分享</li>
+<li>在 Discord 上赢取兑换码</li>
+<li>GitHub 合作计划</li>
+</ol>
+<div calss="anzhiyu-tag-link"><a class="tag-Link" target="_blank" href="https://edgeone.ai/zh/redemption">
+    <div class="tag-link-tips">引用站外地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" style="background-image: url(https://favicon.im/edgeone.ai)">
+          <i class="anzhiyufont anzhiyu-icon-link" style="display: none"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">EdgeOne</div>
+            <div class="tag-link-sitename">点击跳转到获取页面</div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div>
+<p>后两种方法我没试过，在x平台也就是推特，只需要点击立即发布，然后分享一条推文就可以获得免费套餐资格。这是很轻松的，当然如果你没法打开X平台，这里再提供第四种更方法，就是直接点击下面的链接申请免费套餐资格。</p>
+<p>我看其他博主没人说这个方法，就当是本站福利了（笑）。</p>
+<p>点击下方链接</p>
+<p><a href="https://curl.qcloud.com/NjJH9ooG">腾讯云EdgeOne免费套餐申请</a></p>
+<p>选择每周抽兑换码，扫描二维码就可以参与了，这个兑换码每周发两千个，但实际参与人只有不到200个，因此100%能拿到兑换码。</p>
+<h2 id="配置CDN加速"><a href="#配置CDN加速" class="headerlink" title="配置CDN加速"></a>配置CDN加速</h2><p>现在你有了免费套餐资格，接下来就可以配置CDN加速了。</p>
+<p>进入你的<a href="https://console.cloud.tencent.com/edgeone/zones">EdgeOne项目</a>，点击新增站点，点击开始接入即可，之后将你的兑换码兑换个人版免费版即可（只能兑换这个）。</p>
+<p>接下来的配置请根据你的网站实际情况进行配置即可，主要配置以下几个选项：</p>
+<ol>
+<li><strong>站点域名</strong>：填写你的网站域名</li>
+<li><strong>源站配置</strong>：填写你的网站源站地址，如果是从腾讯云购买的域名可以一键配置，否则得用cname配置</li>
+<li><strong>加速区域</strong>：选择全球加速</li>
+<li><strong>协议配置</strong>：建议开启HTTPS，选择自动申请免费证书</li>
+<li><strong>缓存配置</strong>：建议开启静态资源缓存</li>
+<li><strong>防护配置</strong>：这个在免费版中好像不能设置</li>
+</ol>
+<p>如果你是新手第一次配置，可以去看张洪heo大佬的文章<a href="https://blog.zhheo.com/p/5e50rt80.html">腾讯云EdgeOne免费无限量CDN流量，良心到哭了（抽兑换码）</a></p>
+<p>配置完之后效果非常显著。检测访问全国都是深绿色，没有闪电标志，最关键的是长期完全免费的。这次真的得感谢腾讯云，良心到家了！</p>
+</div>]]></content>
+      <categories>
+        <category>福利</category>
+      </categories>
+      <tags>
+        <tag>腾讯云</tag>
+        <tag>EdgeOne</tag>
+        <tag>CDN加速</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【学习笔记】链表、栈、队列的实现方法</title>
+    <url>/posts/6650a8f9.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p><strong>链表（Linked List）</strong>、<strong>栈（Stack）</strong>、<strong>队列（Queue）</strong>是数据结构中最基础的三大结构（还有一个是数组）。<strong>熟悉并掌握</strong>数据结构和算法是合格程序员基本功之一，不同的结构在不同的应用场景中往往会带来不一样的<strong>处理效率</strong>。之前文章中已经介绍了链表，本文将介绍栈和队列，以及这三种结构的<strong>实现方法</strong>。</p>
+<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p><strong>栈（stack）</strong>又名<strong>堆栈</strong>，它是一种运算受限的<strong>线性表</strong>。限定仅在<strong>表尾</strong>进行插入和删除操作的线性表。这一端被称为<strong>栈顶</strong>，相对地，把另一端称为<strong>栈底</strong>。向一个栈插入新元素又称作<strong>进栈</strong>、<strong>入栈</strong>或<strong>压栈</strong>，它是把新元素放到<strong>栈顶元素</strong>的上面，使之成为新的栈顶元素；从一个栈删除元素又称作<strong>出栈</strong>或<strong>退栈</strong>，它是把栈顶元素删除掉，使其<strong>相邻的元素</strong>成为新的栈顶元素。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian6.png"/></div></div>
+<div style="text-align: center;">
+
+栈 示意图
+</div>
+
+<p>栈，通俗地说，就像我们往一个杯子里面放东西一样，先放进去的放在最下面，只有把上面的东西拿出来后才能拿出下面压着的东西。</p>
+<p>栈，具有很多用处，计算机中很多处理都是通过栈这种数据结构来进行的，比如<strong>算术运算</strong>，准备两个栈，一个栈存储<strong>数字</strong>，一个栈存储<strong>符号</strong>，从头开始依次把字符<strong>对应</strong>压入到这两个栈中，当所有字符都放入栈之后，<strong>依次</strong>从数字栈中取出两个元素，并从<strong>符号栈</strong>中取出一个元素，进行计算，结果压回<strong>数字栈</strong>，继续以此运行，直到符号栈为空，或者数字栈只剩下一个元素为止，弹出这个数字即为<strong>最后的结果</strong>。</p>
+<p>这么说很抽象，后面以实际题目进行讲解。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>可以用数组（连续的内存空间，按索引取值）来实现栈。</p>
+<p>栈的基本方法只有两个，分别为入栈（Push）元素和出栈（Pop）。</p>
+<p>以 <code>Lab3</code> 作为例题，题目如下：</p>
+</div>]]></content>
+      <categories>
+        <category>代码学习</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>链表</tag>
+        <tag>栈</tag>
+        <tag>队列</tag>
       </tags>
   </entry>
   <entry>
@@ -1211,34 +1239,6 @@ UML图
         <tag>链表</tag>
         <tag>递归</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【学习笔记】链表、栈、队列的实现方法</title>
-    <url>/posts/6650a8f9.html</url>
-    <content><![CDATA[<div id="postchat_postcontent"><p><strong>链表（Linked List）</strong>、<strong>栈（Stack）</strong>、<strong>队列（Queue）</strong>是数据结构中最基础的三大结构（还有一个是数组）。<strong>熟悉并掌握</strong>数据结构和算法是合格程序员基本功之一，不同的结构在不同的应用场景中往往会带来不一样的<strong>处理效率</strong>。之前文章中已经介绍了链表，本文将介绍栈和队列，以及这三种结构的<strong>实现方法</strong>。</p>
-<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p><strong>栈（stack）</strong>又名<strong>堆栈</strong>，它是一种运算受限的<strong>线性表</strong>。限定仅在<strong>表尾</strong>进行插入和删除操作的线性表。这一端被称为<strong>栈顶</strong>，相对地，把另一端称为<strong>栈底</strong>。向一个栈插入新元素又称作<strong>进栈</strong>、<strong>入栈</strong>或<strong>压栈</strong>，它是把新元素放到<strong>栈顶元素</strong>的上面，使之成为新的栈顶元素；从一个栈删除元素又称作<strong>出栈</strong>或<strong>退栈</strong>，它是把栈顶元素删除掉，使其<strong>相邻的元素</strong>成为新的栈顶元素。</p>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian6.png"/></div></div>
-<div style="text-align: center;">
-
-栈 示意图
-</div>
-
-<p>栈，通俗地说，就像我们往一个杯子里面放东西一样，先放进去的放在最下面，只有把上面的东西拿出来后才能拿出下面压着的东西。</p>
-<p>栈，具有很多用处，计算机中很多处理都是通过栈这种数据结构来进行的，比如<strong>算术运算</strong>，准备两个栈，一个栈存储<strong>数字</strong>，一个栈存储<strong>符号</strong>，从头开始依次把字符<strong>对应</strong>压入到这两个栈中，当所有字符都放入栈之后，<strong>依次</strong>从数字栈中取出两个元素，并从<strong>符号栈</strong>中取出一个元素，进行计算，结果压回<strong>数字栈</strong>，继续以此运行，直到符号栈为空，或者数字栈只剩下一个元素为止，弹出这个数字即为<strong>最后的结果</strong>。</p>
-<p>这么说很抽象，后面以实际题目进行讲解。</p>
-<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>可以用数组（连续的内存空间，按索引取值）来实现栈。</p>
-<p>栈的基本方法只有两个，分别为入栈（Push）元素和出栈（Pop）。</p>
-<p>以 <code>Lab3</code> 作为例题，题目如下：</p>
-</div>]]></content>
-      <categories>
-        <category>代码学习</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-        <tag>链表</tag>
-        <tag>栈</tag>
-        <tag>队列</tag>
       </tags>
   </entry>
 </search>
