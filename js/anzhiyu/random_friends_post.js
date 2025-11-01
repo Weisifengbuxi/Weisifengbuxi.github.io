@@ -166,8 +166,8 @@ function randomNum(minNum, maxNum) {
 }
 
 function getRandomPostLevel(times) {
-  if (times > 1000) return "愿者上钩";
-  if (times > 500) return "俯览天下";
+  if (times > 2000) return "愿者上钩";
+  if (times > 1000) return "俯览天下";
   if (times > 100) return "绝世渔夫";
   if (times > 75) return "钓鱼王者";
   if (times > 50) return "钓鱼宗师";
