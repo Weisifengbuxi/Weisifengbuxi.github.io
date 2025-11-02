@@ -714,9 +714,9 @@ ASCII码对照表
     <content><![CDATA[<div id="postchat_postcontent"><p>很多朋友的网站没有购买服务器，因此部署在国外的服务器上，比如Vercel。但由于Vercel 国内被墙了，因此没法使用CDN加速。这使得网站访问速度十分缓慢。</p>
 <p>听说腾讯云有相关免费CDN就去试了一下，没想到居然这么良心，免费套餐就能满足大部分个人站长的需求，而且配置起来也非常简单。分享一下如何为你的网站添加腾讯云CDN加速服务，保护你的网站同时让你的网站访问速度飞起来！</p>
 <p>话不多说，直接上教程。</p>
-<div class="note success no-icon flat"><p>在开始前，你需要注册一个腾讯云的账号（最好实名认证）</p>
+<div class="note success no-icon flat"><p>在开始前，你需要为你的网站备案，并注册一个腾讯云的账号（最好实名认证）</p>
 </div>
-<h2 id="将你的网站部署在EdgeOne上"><a href="#将你的网站部署在EdgeOne上" class="headerlink" title="将你的网站部署在EdgeOne上"></a>将你的网站部署在EdgeOne上</h2><p>点击访问该链接<a href="https://console.cloud.tencent.com/edgeone/pages">EdgeOne网站部署</a>，点击创建项目，选择导入Git仓库，这时候你需要将你的网站代码上传到GitHub，再将GitHub仓库地址填写进去，验证。之后选择你的项目进入。</p>
+<h2 id="将你的网站部署在EdgeOne上"><a href="#将你的网站部署在EdgeOne上" class="headerlink" title="将你的网站部署在EdgeOne上"></a>将你的网站部署在EdgeOne上</h2><p>点击访问该链接<a href="https://console.cloud.tencent.com/edgeone/pages">EdgeOne page</a>，点击创建项目，选择导入Git仓库，这时候你需要将你的网站代码上传到GitHub，再将GitHub仓库地址填写进去，验证。之后选择你的项目进入。</p>
 <div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/edgeone1.png"></div></div>
 <p>进入你的项目之后点击开始部署，注意项目中不要有有超过<strong>25MB</strong>的文件，否则会部署失败。</p>
 <h2 id="获得免费套餐资格"><a href="#获得免费套餐资格" class="headerlink" title="获得免费套餐资格"></a>获得免费套餐资格</h2><p>然后你需要先获得免费套餐内测资格，正常有以下几种方式获得（不推荐）：</p>
