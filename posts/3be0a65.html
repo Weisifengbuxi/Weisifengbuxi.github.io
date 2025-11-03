@@ -5,7 +5,7 @@
   diytitle: {"enable":true,"leaveTitle":"希望你每天开心鸭！","backTitle":"欢迎回来~"},
   LA51: {"enable":true,"ck":"3NaU22Pij8KxRC6w","LingQueMonitorID":"3NaUCeXWGlWFdg8C"},
   greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安，要早睡哦😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
-  twikooEnvId: 'https://fengbuxi-comment.netlify.app/.netlify/functions/twikoo',
+  twikooEnvId: 'https://twikoo.weisifengbuxi.top',
   commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
   music_page_default: "nav_music",
   root: '/',
@@ -61,7 +61,7 @@
   isHighlightShrink: false,
   isToc: true,
   postUpdate: '2025-10-18 00:52:22',
-  postMainColor: '#4d76bd',
+  postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -433,7 +433,7 @@ window.addEventListener('load', () => {
             headers: { 'Content-Type': 'application/json' }
           }
           danmuStore = [];
-          const response = await fetch(`https://fengbuxi-comment.netlify.app/.netlify/functions/twikoo`, options);
+          const response = await fetch(`https://twikoo.weisifengbuxi.top`, options);
           if (response.ok) {
             const { data } = await response.json();
             //- console.info(data);
@@ -610,52 +610,75 @@ queueMicrotask(() => {
     updateTime();
     updateHtml();
   }, 1000);
-})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="../js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="../js/search/algolia.js"></script><div class="js-pjax"><!-- 假设这是评论区相关的模板文件（如 comment.pug 或类似模板） --><script>(() => {
+  // 初始化 Twikoo 评论区
   const init = () => {
     twikoo.init(Object.assign({
-      el: '#twikoo-wrap',
-      envId: 'https://fengbuxi-comment.netlify.app/.netlify/functions/twikoo',
-      region: 'ap-shanghai',
-      placeholder: '请留下您的想法和建议\n祝您有愉快的一天',
-      disableImageUpload: true,
+      el: '#twikoo-wrap',  // 评论区容器 ID
+      envId: 'https://twikoo.weisifengbuxi.top',  // 你的 Netlify 后端地址
+      // 移除 region 参数（Netlify 后端不需要地域配置）
+      placeholder: '请留下您的想法和建议\n祝您有愉快的一天',  // 评论框占位符
+      disableImageUpload: true,  // 禁用图片上传（按需调整）
       onCommentLoaded: () => {
+        // 评论加载完成后初始化图片灯箱（按需保留）
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
-    }, null))
+    }, {"card_post_count":true}))  // 合并主题配置中的额外选项
   }
 
+  // 加载 Twikoo 核心脚本
   const loadTwikoo = () => {
-    if (typeof twikoo === 'object') setTimeout(runFn,0)
-    else getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn)
+    if (typeof twikoo === 'object') {
+      // 若已加载，直接执行初始化
+      setTimeout(runFn, 0);
+    } else {
+      // 动态加载 Twikoo 脚本（路径从主题配置获取）
+      getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn).catch(err => {
+        console.error('Twikoo 脚本加载失败：', err);
+      });
+    }
   }
 
+  // 获取并更新评论数
   const getCount = () => {
-    const countELement = document.getElementById('twikoo-count')
-    if(!countELement) return
+    const countElement = document.getElementById('twikoo-count');  // 评论数显示元素
+    if (!countElement) return;  // 若元素不存在，直接返回
+
+    // 调用 Twikoo 接口获取当前页面评论数
     twikoo.getCommentsCount({
-      envId: 'https://fengbuxi-comment.netlify.app/.netlify/functions/twikoo',
-      region: 'ap-shanghai',
-      urls: [window.location.pathname],
-      includeReply: false
+      envId: 'https://twikoo.weisifengbuxi.top',  // 后端地址
+      // 移除 region 参数（避免与 Netlify 冲突）
+      urls: [window.location.pathname],  // 当前页面路径（需与后端存储一致）
+      includeReply: false  // 不计入回复（按需调整为 true）
     }).then(res => {
-      countELement.textContent = res[0].count
+      // 接口返回成功后更新显示
+      if (res && res.length > 0) {
+        countElement.textContent = res[0].count;  // 显示实际评论数
+      }
     }).catch(err => {
-      console.error(err)
-    })
+      console.error('获取评论数失败：', err);  // 打印错误便于排查
+    });
   }
 
+  // 执行初始化和计数逻辑
   const runFn = () => {
-    init();
+    init();  // 初始化评论区
+    // 仅当配置开启评论数显示，且当前是文章页时，执行计数
     GLOBAL_CONFIG_SITE.isPost && getCount()
   }
 
+  // 条件加载评论区（根据主题配置）
   if ('Twikoo' === 'Twikoo' || !false) {
-    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
-    else {
-      loadTwikoo()
+    if (false) {
+      // 非懒加载模式：直接加载
+      anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo);
+    } else {
+      // 懒加载模式：立即加载
+      loadTwikoo();
     }
   } else {
-    window.loadOtherComment = loadTwikoo
+    // 其他情况：暴露加载函数供外部调用
+    window.loadOtherComment = loadTwikoo;
   }
 })()</script><input type="hidden" name="page-type" id="page-type" value="学习笔记"><script async="" src="../js/anzhiyu/comment_barrage.js"></script></div><script>window.addEventListener('load', () => {
   const changeContent = (content) => {
@@ -675,8 +698,8 @@ queueMicrotask(() => {
   const getComment = () => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
-        envId: 'https://fengbuxi-comment.netlify.app/.netlify/functions/twikoo',
-        region: 'ap-shanghai',
+        envId: 'https://twikoo.weisifengbuxi.top',
+        region: '',
         pageSize: 6,
         includeReply: true
       }).then(function (res) {
