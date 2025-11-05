@@ -1,6 +1,6 @@
 (function() {
     const STATUS_CACHE_KEY = "statusTagsData";
-    const STATUS_JSON_URL = "https://check-flink.mcxiaochen.top/result.json"; // 这里设为你自己的url
+    const STATUS_JSON_URL = "https://checklink.weisifengbuxi.top/result.json"; // 这里设为你自己的url
 
     let latestData = [];
 
