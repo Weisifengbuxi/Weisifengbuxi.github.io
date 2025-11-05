@@ -1,6 +1,6 @@
-(function () {
+(function() {
     const STATUS_CACHE_KEY = "statusTagsData";
-    const STATUS_JSON_URL = "https://blog.weisifengbuxi.top/result.json"; // 这里设为你自己的url
+    const STATUS_JSON_URL = "https://check-flink.mcxiaochen.top/result.json"; // 这里设为你自己的url
 
     let latestData = [];
 
@@ -31,9 +31,9 @@
             if (status.latency >= 0) {
                 text = status.latency.toFixed(2) + " s";
                 colorClass = status.latency <= 2 ? "status-tag-green"
-                    : status.latency <= 5 ? "status-tag-light-yellow"
-                        : status.latency <= 10 ? "status-tag-dark-yellow"
-                            : "status-tag-red";
+                           : status.latency <= 5 ? "status-tag-light-yellow"
+                           : status.latency <= 10 ? "status-tag-dark-yellow"
+                           : "status-tag-red";
             }
 
             tag.textContent = text;
@@ -66,10 +66,7 @@
             .then(json => {
                 latestData = Array.isArray(json) ? json : (json.link_status || []);
                 addStatusTags(latestData);
-                localStorage.setItem(STATUS_CACHE_KEY, JSON.stringify({
-                    data: latestData,
-                    timestamp: new Date().toISOString()
-                }));
+                localStorage.setItem(STATUS_CACHE_KEY, JSON.stringify({ data: latestData, timestamp: new Date().toISOString() }));
             })
             .catch(err => console.error("❌ 获取 result.json 出错:", err));
     }
@@ -77,7 +74,7 @@
     // 监听 DOM 变化，自动渲染新增卡片
     function observeNewItems() {
         const observer = new MutationObserver(() => addStatusTags(latestData));
-        observer.observe(document.body, {childList: true, subtree: true});
+        observer.observe(document.body, { childList: true, subtree: true });
     }
 
     // 初始化
