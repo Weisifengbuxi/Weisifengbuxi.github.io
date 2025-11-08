@@ -40,7 +40,7 @@ const showWelcome = ({
         lng,
         lat,
         country,
-        prov,
+        province,
         city
     } = data;
     const welcomeInfo = getWelcomeInfoElement();
@@ -48,11 +48,11 @@ const showWelcome = ({
 
     const dist = calculateDistance(lng, lat);
     const ipDisplay = formatIpDisplay(ip);
-    const pos = formatLocation(country, prov, city);
+    const pos = formatLocation(country, province, city);
 
     welcomeInfo.style.display = 'block';
     welcomeInfo.style.height = 'auto';
-    welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, prov, city);
+    welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
 
 const calculateDistance = (lng, lat) => {
@@ -67,16 +67,16 @@ const calculateDistance = (lng, lat) => {
     return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 };
 const formatIpDisplay = (ip) => ip.includes(":") ? "<br>好复杂，咱看不懂~(ipv6)" : ip;
-const formatLocation = (country, prov, city) => {
-    return country ? (country === "中国" ? `${prov} ${city}` : country) : '神秘地区';
+const formatLocation = (country, province, city) => {
+    return country ? (country === "中国" ? `${province} ${city}` : country) : '神秘地区';
 };
 
-const generateWelcomeMessage = (pos, dist, ipDisplay, country, prov, city) => `
+const generateWelcomeMessage = (pos, dist, ipDisplay, country, province, city) => `
     欢迎来自 <b>${pos}</b> 的朋友<br>
     您当前距博主约 <b>${dist}</b> 公里！<br>
     您的IP地址：<b class="ip-address">${ipDisplay}</b><br>
     ${getTimeGreeting()}<br>
-    Tip：<b>${getGreeting(country, prov, city)}</b>
+    Tip：<b>${getGreeting(country, province, city)}</b>
 `;
 
 const addStyles = () => {
@@ -304,6 +304,36 @@ const greetings = {
     "德国": "Die Zeit verging im Fluge.",
     "澳大利亚": "一起去大堡礁吧！",
     "加拿大": "拾起一片枫叶赠予你",
+    "英国": "Keep Calm and Carry On",
+    "意大利": "La vita è bella!",
+    "西班牙": "¡La vida es bella!",
+    "巴西": "A vida é bela!",
+    "印度": "जीवन सुंदर है!",
+    "墨西哥": "¡La vida es bella!",
+    "南非": "人生美好！",
+    "埃及": "الحياة جميلة!",
+    "土耳其": "Hayat güzeldir!",
+    "韩国": "인생은 아름다워!",
+    "越南": "Cuộc sống thật đẹp!",
+    "泰国": "ชีวิตนั้นช่างงดงาม!",
+    "菲律宾": "Ang buhay ay maganda!",
+    "马来西亚": "Hidup itu indah!",
+    "新加坡": "Life is beautiful!",
+    "印尼": "Hidup itu indah!",
+    "沙特阿拉伯": "الحياة جميلة!",
+    "阿联酋": "الحياة جميلة!",
+    "以色列": "החיים יפים!",
+    "荷兰": "Het leven is mooi!",
+    "比利时": "Het leven is mooi!",
+    "瑞士": "Das Leben ist schön!",
+    "瑞典": "Livet är vackert!",
+    "挪威": "Livet er vakkert!",
+    "丹麦": "Livet er smukt!",
+    "芬兰": "Elämä on kaunista!",
+    "波兰": "Życie jest piękne!",
+    "捷克共和国": "Život je krásný!",
+    "希腊": "Η ζωή είναι όμορφη!",
+    "葡萄牙": "A vida é bela!",
     "其他": "带我去你的国家逛逛吧"
 };
 
