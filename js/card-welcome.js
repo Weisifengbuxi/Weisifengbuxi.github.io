@@ -367,6 +367,7 @@ const getGreeting = (country, province, city) => {
 
 const getTimeGreeting = () => {
     const hour = new Date().getHours();
+    if (hour < 6)  return "深夜了🌙 ，注意休息呀~"; // 0-5点：凌晨
     if (hour < 11) return "早上好🌤️ ，一日之计在于晨";
     if (hour < 13) return "中午好☀️ ，记得午休喔~";
     if (hour < 17) return "下午好🕞 ，饮茶先啦！";
