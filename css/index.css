@@ -5558,40 +5558,80 @@ body[data-type='about'] #web_bg {
   z-index: 10 !important;
 }
 .hero-tooltip {
-  position: absolute;
+  position: fixed;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  pointer-events: none;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 8px;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 10000;
-  font-size: 14px;
-  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-  white-space: nowrap;
+  pointer-events: none;
+  -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-weight: 500;
+  max-width: 200px;
+  text-align: center;
+/* 添加小箭头 */
+}
+.hero-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0,0,0,0.9);
 }
 .hero-tooltip.show {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+  visibility: visible;
+}
+.hero-group-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--anzhiyu-main);
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hero-group-item:nth-child(n+2) {
+  margin-left: -10px;
+}
+.hero-group-item:hover {
+  z-index: 10;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .hero-group-item.dimmed {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 @-moz-keyframes loading-bar {
   0% {
