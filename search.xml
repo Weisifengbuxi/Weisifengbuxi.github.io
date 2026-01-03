@@ -826,7 +826,7 @@ SR-NOR 锁存器
 </div>
 <h2 id="将你的网站部署在EdgeOne上"><a href="#将你的网站部署在EdgeOne上" class="headerlink" title="将你的网站部署在EdgeOne上"></a>将你的网站部署在EdgeOne上</h2><p>点击访问该链接<a href="https://console.cloud.tencent.com/edgeone/pages">EdgeOne page</a>，点击创建项目，选择导入Git仓库，这时候你需要将你的网站代码上传到GitHub，再将GitHub仓库地址填写进去，验证。之后选择你的项目进入。</p>
 <div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/edgeone1.png"></div></div>
-<p>进入你的项目之后点击开始部署，注意项目中不要有有超过<strong>25MB</strong>的文件，否则会部署失败。</p>
+<p>进入你的项目之后点击开始部署，注意项目中不要有单个大小超过<strong>25MB</strong>的文件，否则会部署失败。</p>
 <h2 id="获得免费套餐资格"><a href="#获得免费套餐资格" class="headerlink" title="获得免费套餐资格"></a>获得免费套餐资格</h2><p>然后你需要先获得免费套餐内测资格，正常有以下几种方式获得（不推荐）：</p>
 <ol>
 <li>在X平台分享</li>
@@ -846,7 +846,7 @@ SR-NOR 锁存器
         <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
     </div>
     </a></div>
-<p>后两种方法我没试过，在x平台也就是推特，只需要点击立即发布，然后分享一条推文就可以获得免费套餐资格。这是很轻松的，当然如果你没法打开X平台，这里再提供第四种更方法，就是直接点击下面的链接申请免费套餐资格。</p>
+<p>后两种方法我没试过，在x平台也就是推特，只需要点击立即发布，然后分享一条推文就可以获得免费套餐资格。这是很轻松的，当然如果你没法打开X平台，这里再提供第四种更简单的方法，就是直接点击下面的链接申请免费套餐资格。</p>
 <p>我看其他博主没人说这个方法，就当是本站福利了（笑）。</p>
 <p>点击下方链接</p>
 <p><a href="https://curl.qcloud.com/NjJH9ooG">腾讯云EdgeOne免费套餐申请</a></p>
@@ -1505,6 +1505,71 @@ SR-NOR 锁存器
         <tag>博客美化</tag>
         <tag>hexo</tag>
         <tag>AnZhiYu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lc-3 处理器的指令格式表</title>
+    <url>/posts/37ed3dc9.html</url>
+    <content><![CDATA[<div id="postchat_postcontent"><p>学期末尤其繁忙，不是考试就是小组作业，终于有时间写出这篇文章，那我们开始吧</p>
+<h1 id=""><a href="#" class="headerlink" title="#"></a>#</h1><div class="img-wrap"><div class="img-bg"><img class="img" src="https://images.weserv.nl/?url=https://cdn.jsdelivr.net/gh/Weisifengbuxi/tuchuang@main/img/fengmian12.1"/></div></div>
+<div style="text-align: center;">
+LC-3 指令格式表
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>LC-3</tag>
+        <tag>指令格式</tag>
       </tags>
   </entry>
 </search>
