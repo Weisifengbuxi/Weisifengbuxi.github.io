@@ -1,7 +1,21 @@
+/* 1. 定义所有缺失的 CSS 变量（纯 CSS，无 Sass 语法） */
+:root {
+  /* 字体/文本颜色 */
+  --efu-fontcolor: #333333;         /* 主文本色，可按你的主题修改 */
+  --efu-secondtext: #666666;        /* 次要文本色 */
+  /* 卡片背景色 */
+  --efu-card-bg: #ffffff;           /* 卡片背景 */
+  /* 主题色系列 */
+  --anzhiyu-main: #4299e1;          /* 主主题色 */
+  --anzhiyu-main-op: rgba(66, 153, 225, 0.6); /* 主题色半透明 */
+  --anzhiyu-main-op-deep: rgba(66, 153, 225, 0.8); /* 主题色深半透 */
+  --anzhiyu-main-op-light: rgba(66, 153, 225, 0.4); /* 主题色浅半透 */
+}
+
+/* 2. 恢复你原来的所有样式，只去掉报错的 @extend，把样式直接展开 */
 .card-widget {
-    padding: 20px!important;     /* 原文padding: 10px!important;这样会导致微信卡css发生错误 */
+    padding: 20px!important;     /* 保持你修复微信卡的 padding */
     max-height: calc(100vh - 50px);
-    /* 内容超出时出现滚动条，避免溢出 */
     overflow-y: auto;
 }
 
@@ -10,7 +24,7 @@
 }
 
 #card-widget-calendar .item-content {
-    display: flex;
+    display: flex; /* 保持左右分栏布局 */
 }
 
 #calendar-area-left {
@@ -39,8 +53,11 @@
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 700;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.3rem; /* 向上移动文字 */
+    margin-bottom: 0.5rem; /* 保持与下方数字的间距，避免重叠 */
 }
 
 #calendar-date {
@@ -50,26 +67,28 @@
     letter-spacing: 3px;
     color: var(--anzhiyu-main);
     font-weight: 700;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: calc(50% - 2.1rem);
+    top: calc(50% - 1.6rem); /* 微调top值，让数字位置更合适 */
 }
 
 #calendar-lunar, #calendar-solar {
     height: 1rem;
     font-size: 12px;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
 }
 
 #calendar-solar {
-    bottom: 1.5rem;  /* 原文bottom: 2.1rem;这样会导致微信卡css发生错误 */
+    bottom: 1.5rem;  /* 保持你修复微信卡的 bottom 值 */
 }
 
 #calendar-lunar {
-    bottom: 0.5rem;   /* 原文bottom: 1rem;这样会导致微信卡css发生错误 */
+    bottom: 0.5rem;   /* 保持你修复微信卡的 bottom 值 */
     color: var(--efu-secondtext);
 }
 
@@ -80,8 +99,8 @@
     font-size: 12px;
     line-height: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #calendar-main a.now {
@@ -101,8 +120,8 @@
 .calendar-d0, .calendar-d1, .calendar-d2, .calendar-d3, .calendar-d4, .calendar-d5, .calendar-d6 {
     width: calc(100% / 7);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #card-widget-schedule .item-content {
@@ -113,8 +132,8 @@
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #schedule-area-left {
@@ -129,8 +148,9 @@
 .schedule-r0, .schedule-r1, .schedule-r2 {
     height: 2rem;
     width: 100%;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .schedule-d0 {
@@ -143,8 +163,9 @@
 .schedule-d1 {
     width: calc(100% - 35px);
     height: 1.5rem;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 progress::-webkit-progress-bar {
@@ -164,6 +185,7 @@ progress::-webkit-progress-value {
     z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
 }
 
@@ -189,6 +211,7 @@ progress::-webkit-progress-value {
 #schedule-date, #schedule-days, #schedule-title {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #schedule-title {
