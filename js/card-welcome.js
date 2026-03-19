@@ -1,5 +1,5 @@
 window.IP_CONFIG = {
-    API_KEY: '33ef54a143c8f723', // API密钥 申请地址：https://api.76.al/
+    API_KEY: 'BZgtpreSF70uNpaEniAiMnRepU', // API密钥 申请地址：https://api.76.al/
     BLOG_LOCATION: {
         lng: 113.666, // 经度
         lat: 22.666 // 纬度
@@ -24,11 +24,10 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-// ========== 以下是修改/新增的核心代码 ==========
 // 新增：获取用户公网IP（适配新API必填的ip参数）
 const getClientPublicIp = async () => {
     try {
-        // 主接口：ipify（稳定可靠）
+        // 稳定获取公网IP的接口
         const response = await fetch('https://api.ipify.org?format=json');
         if (!response.ok) throw new Error('获取公网IP失败');
         const data = await response.json();
@@ -36,7 +35,6 @@ const getClientPublicIp = async () => {
     } catch (error) {
         console.error('主接口获取IP失败，切换备用接口:', error);
         try {
-            // 备用接口：ipapi.co
             const backupRes = await fetch('https://ipapi.co/json/');
             const backupData = await backupRes.json();
             return backupData.ip;
@@ -46,57 +44,61 @@ const getClientPublicIp = async () => {
     }
 };
 
-// 替换：适配新API的IP定位请求逻辑
+// 替换：适配官方新API的fetch请求逻辑
 const fetchIpData = async () => {
-    try {
-        // 1. 先获取用户真实公网IP
-        const userIp = await getClientPublicIp();
+    // 1. 先获取用户真实公网IP
+    const userIp = await getClientPublicIp();
 
-        // 2. 发起新API请求（Bearer Token 认证 + IP 参数）
-        const response = await fetch(
-            `https://v1.nsuuu.com/api/ipip?ip=${encodeURIComponent(userIp)}`,
-            {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${IP_CONFIG.API_KEY}`, // 你的API密钥
-                    'Content-Type': 'application/json'
-                }
-            }
-        );
+    // 2. 严格按官方示例发起请求（传ip参数 + Bearer Token认证）
+    const response = await fetch(`https://v1.nsuuu.com/api/ipip?ip=${userIp}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${IP_CONFIG.API_KEY}`, // 官方要求的Bearer Token
+            'Content-Type': 'application/json'
+        }
+    });
 
-        if (!response.ok) throw new Error(`请求失败：${response.status} ${response.statusText}`);
-        const result = await response.json();
+    if (!response.ok) throw new Error('网络响应不正常');
+    const result = await response.json();
 
-        // 校验接口返回状态（新接口用message字段，适配原逻辑）
-        if (result.code !== 200) throw new Error(result.message || '获取IP信息失败');
-
-        return result.data; // 直接返回接口中的data对象
-    } catch (error) {
-        console.error('获取IP信息失败:', error);
-        throw error;
-    }
+    // 校验接口返回状态码（官方返回code=200为成功，提示用message字段）
+    if (result.code !== 200) throw new Error(result.message || '获取IP信息失败');
+    return result.data; // 直接返回接口中的data对象
 };
 
-// 替换：适配新API的经纬度字段名（longitude/latitude → 原lng/lat）
+// 修复核心：兼容经纬度字段 + 避免 NaN
 const showWelcome = (data) => {
     if (!data) return showErrorMessage();
 
+    // 调试：打印接口返回的完整数据（上线后可删除）
+    console.log('接口返回的定位数据:', data);
+
+    // 兼容两种字段名：新接口的 longitude/latitude + 旧接口的 lng/lat
     const {
-        longitude: lngStr,  // 新接口字段：longitude → 对应原代码的 lng
-        latitude: latStr,   // 新接口字段：latitude → 对应原代码的 lat
+        longitude: lngStrNew,
+        latitude: latStrNew,
+        lng: lngStrOld,
+        lat: latStrOld,
         country,
         province,
         city,
         ip
     } = data;
-    // 经纬度字符串转数值（接口返回的是字符串格式，如"113.556808"）
-    const lng = parseFloat(lngStr);
-    const lat = parseFloat(latStr);
+
+    // 优先用新接口字段，失败则用旧接口字段
+    const lngStr = lngStrNew || lngStrOld;
+    const latStr = latStrNew || latStrOld;
+
+    // 转数值，失败则给默认值（避免 NaN）
+    const lng = parseFloat(lngStr) || IP_CONFIG.BLOG_LOCATION.lng;
+    const lat = parseFloat(latStr) || IP_CONFIG.BLOG_LOCATION.lat;
 
     const welcomeInfo = getWelcomeInfoElement();
     if (!welcomeInfo) return;
 
-    const dist = calculateDistance(lng, lat);
+    // 计算距离（确保不会出现 NaN）
+    const dist = Math.round(calculateDistance(lng, lat));
+
     const ipDisplay = formatIpDisplay(ip);
     const pos = formatLocation(country, province, city);
 
@@ -104,7 +106,6 @@ const showWelcome = (data) => {
     welcomeInfo.style.height = 'auto';
     welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
-// ========== 以上是修改/新增的核心代码 ==========
 
 const calculateDistance = (lng, lat) => {
     const R = 6371; // 地球半径(km)
@@ -115,7 +116,7 @@ const calculateDistance = (lng, lat) => {
         Math.cos(IP_CONFIG.BLOG_LOCATION.lat * rad) * Math.cos(lat * rad) *
         Math.sin(dLon / 2) * Math.sin(dLon / 2);
 
-    return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 };
 
 const formatIpDisplay = (ip) => ip.includes(":") ? "<br>好复杂，咱看不懂~(ipv6)" : ip;
@@ -359,7 +360,6 @@ const greetings = {
     "美国": "Let us live in peace!",
     "日本": "よろしく、一緒に桜を見ませんか",
     "俄罗斯": "干了这瓶伏特加！",
-    "法国": "C'est La Vie",
     "德国": "Die Zeit verging im Fluge.",
     "澳大利亚": "一起去大堡礁吧！",
     "加拿大": "拾起一片枫叶赠予你",
