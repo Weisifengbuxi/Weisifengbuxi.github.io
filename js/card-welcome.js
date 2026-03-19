@@ -1,5 +1,5 @@
 window.IP_CONFIG = {
-    API_KEY: '33ef54a143c8f723', // ⚠️ 请替换为您的真实有效密钥（https://v1.nsuuu.com/）
+    API_KEY: '33ef54a143c8f723', // ⚠️ 请替换为您的真实有效密钥（申请地址：https://v1.nsuuu.com/）
     BLOG_LOCATION: {
         lng: 113.666,
         lat: 22.666
@@ -25,22 +25,24 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-// ========== IP 获取（多服务降级，本地开发返回测试IP） ==========
+// ========== IP 获取（多服务降级 + JSONP 备选） ==========
 const getUserIP = async () => {
     // 如果是本地开发环境，返回测试IP（避免CORS问题）
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         console.log('开发环境，使用测试IP 113.76.180.255');
-        return '113.76.180.255'; // 可以替换为您想测试的IP
+        return '113.76.180.255';
     }
 
+    // 服务列表（按可靠性排序，优先尝试可能支持CORS的）
     const services = [
-        { url: 'https://ip.3322.net/', type: 'text' },
         { url: 'https://api.ip.sb/ip?format=json', type: 'json', ipField: 'ip' },
-        { url: 'https://myip.ipip.net/', type: 'text' },
         { url: 'https://api64.ipify.org?format=json', type: 'json', ipField: 'ip' },
+        { url: 'https://ip.3322.net/', type: 'text' },
+        { url: 'https://myip.ipip.net/', type: 'text' },
         { url: 'https://ipapi.co/json/', type: 'json', ipField: 'ip' }
     ];
 
+    // 尝试所有 fetch 服务
     for (const service of services) {
         try {
             const response = await fetch(service.url);
@@ -69,7 +71,30 @@ const getUserIP = async () => {
             console.warn(`IP 服务 ${service.url} 失败:`, error);
         }
     }
-    throw new Error('无法获取您的公网 IP，请检查网络连接');
+
+    // 如果所有 fetch 都失败，尝试 JSONP（不受 CORS 限制）
+    console.warn('fetch 方式均失败，尝试 JSONP 获取 IP...');
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        const callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+        window[callbackName] = function(data) {
+            delete window[callbackName];
+            document.body.removeChild(script);
+            if (data && data.ip) {
+                resolve(data.ip);
+            } else {
+                reject(new Error('JSONP 返回数据格式错误'));
+            }
+        };
+
+        script.src = `https://jsonip.com?callback=${callbackName}`;
+        script.onerror = function() {
+            delete window[callbackName];
+            document.body.removeChild(script);
+            reject(new Error('JSONP 请求失败'));
+        };
+        document.body.appendChild(script);
+    });
 };
 
 // 请求 API（必须传 ip）
