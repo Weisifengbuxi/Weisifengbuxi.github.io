@@ -1,11 +1,11 @@
 window.IP_CONFIG = {
-    API_KEY: '33ef54a143c8f723', // ⚠️ 请替换为您的真实密钥（申请地址：https://v1.nsuuu.com/）
+    API_KEY: '33ef54a143c8f723', // ⚠️ 请替换为您的真实有效密钥（https://v1.nsuuu.com/）
     BLOG_LOCATION: {
-        lng: 113.666, // 博主所在经度
-        lat: 22.666   // 博主所在纬度
+        lng: 113.666,
+        lat: 22.666
     },
-    CACHE_DURATION: 1000 * 60 * 60, // 缓存有效期（默认1小时）
-    HOME_PAGE_ONLY: true, // 是否只在首页显示
+    CACHE_DURATION: 1000 * 60 * 60,
+    HOME_PAGE_ONLY: true,
 };
 
 // ================== 核心函数 ==================
@@ -25,49 +25,70 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-// 获取用户公网 IP（使用 ipapi.co，国内可用性较好）
+// ========== IP 获取（多服务降级，本地开发返回测试IP） ==========
 const getUserIP = async () => {
-    try {
-        const response = await fetch('https://ipapi.co/json/');
-        if (!response.ok) throw new Error(`IP服务响应失败: ${response.status}`);
-        const data = await response.json();
-        return data.ip;
-    } catch (error) {
-        console.warn('获取用户IP失败:', error);
-        return null;
+    // 如果是本地开发环境，返回测试IP（避免CORS问题）
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('开发环境，使用测试IP 113.76.180.255');
+        return '113.76.180.255'; // 可以替换为您想测试的IP
     }
+
+    const services = [
+        { url: 'https://ip.3322.net/', type: 'text' },
+        { url: 'https://api.ip.sb/ip?format=json', type: 'json', ipField: 'ip' },
+        { url: 'https://myip.ipip.net/', type: 'text' },
+        { url: 'https://api64.ipify.org?format=json', type: 'json', ipField: 'ip' },
+        { url: 'https://ipapi.co/json/', type: 'json', ipField: 'ip' }
+    ];
+
+    for (const service of services) {
+        try {
+            const response = await fetch(service.url);
+            if (!response.ok) continue;
+
+            const text = await response.text();
+            let ip = null;
+
+            if (service.type === 'json') {
+                try {
+                    const data = JSON.parse(text);
+                    ip = data[service.ipField];
+                } catch {
+                    continue;
+                }
+            } else {
+                const match = text.match(/\b(?:\d{1,3}\.){3}\d{1,3}\b/);
+                ip = match ? match[0] : text.trim();
+            }
+
+            if (ip && /^(?:\d{1,3}\.){3}\d{1,3}$/.test(ip)) {
+                console.log(`成功获取 IP（来自 ${service.url}）: ${ip}`);
+                return ip;
+            }
+        } catch (error) {
+            console.warn(`IP 服务 ${service.url} 失败:`, error);
+        }
+    }
+    throw new Error('无法获取您的公网 IP，请检查网络连接');
 };
 
-// 请求新 API（v1.nsuuu.com），必须通过 Authorization 头传递 Bearer Token
+// 请求 API（必须传 ip）
 const fetchIpData = async (ip) => {
     if (!ip) throw new Error('缺少IP参数，无法查询');
-
     const url = `https://v1.nsuuu.com/api/ipip?ip=${encodeURIComponent(ip)}`;
     const response = await fetch(url, {
         method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${IP_CONFIG.API_KEY}`
-        }
+        headers: { 'Authorization': `Bearer ${IP_CONFIG.API_KEY}` }
     });
-
     if (!response.ok) throw new Error(`网络响应不正常: ${response.status}`);
     const result = await response.json();
     if (result.code !== 200) throw new Error(result.msg || '获取IP信息失败');
-    return result.data; // 返回 data 对象（含 country, province, city, latitude, longitude, ip 等）
+    return result.data;
 };
 
-// 展示欢迎信息
 const showWelcome = (data) => {
     if (!data) return showErrorMessage();
-
-    const {
-        latitude: latStr,
-        longitude: lngStr,
-        country,
-        province,
-        city,
-        ip
-    } = data;
+    const { latitude: latStr, longitude: lngStr, country, province, city, ip } = data;
     const lng = parseFloat(lngStr);
     const lat = parseFloat(latStr);
 
@@ -83,9 +104,8 @@ const showWelcome = (data) => {
     welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
 
-// 计算距离（Haversine 公式）
 const calculateDistance = (lng, lat) => {
-    const R = 6371; // 地球半径（km）
+    const R = 6371;
     const rad = Math.PI / 180;
     const dLat = (lat - IP_CONFIG.BLOG_LOCATION.lat) * rad;
     const dLon = (lng - IP_CONFIG.BLOG_LOCATION.lng) * rad;
@@ -95,15 +115,11 @@ const calculateDistance = (lng, lat) => {
     return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 };
 
-// IP 显示格式（IPv6 特殊处理）
 const formatIpDisplay = (ip) => ip.includes(":") ? "<br>好复杂，咱看不懂~(ipv6)" : ip;
-
-// 位置显示格式
 const formatLocation = (country, province, city) => {
     return country ? (country === "中国" ? `${province} ${city}` : country) : '神秘地区';
 };
 
-// 生成欢迎消息 HTML
 const generateWelcomeMessage = (pos, dist, ipDisplay, country, province, city) => `
     欢迎来自 <b>${pos}</b> 的朋友<br>
     您当前距博主约 <b>${dist}</b> 公里！<br>
@@ -112,8 +128,7 @@ const generateWelcomeMessage = (pos, dist, ipDisplay, country, province, city) =
     Tip：<b>${getGreeting(country, province, city)}</b>
 `;
 
-// ================== 样式与 UI ==================
-
+// ================== 样式 ==================
 const addStyles = () => {
     const style = document.createElement('style');
     style.textContent = `
@@ -189,8 +204,7 @@ const addStyles = () => {
     document.head.appendChild(style);
 };
 
-// ================== 位置权限（可选） ==================
-
+// ================== 位置权限相关 ==================
 const checkLocationPermission = () => localStorage.getItem('locationPermission') === 'granted';
 const saveLocationPermission = (permission) => {
     localStorage.setItem('locationPermission', permission);
@@ -231,15 +245,12 @@ const showLoadingSpinner = () => {
 };
 
 // ================== 缓存管理 ==================
-
 const IP_CACHE_KEY_PREFIX = 'ip_info_cache_';
-
 const getIpInfoFromCache = (ip) => {
     if (!ip) return null;
     const cacheKey = IP_CACHE_KEY_PREFIX + ip;
     const cached = localStorage.getItem(cacheKey);
     if (!cached) return null;
-
     const { data, timestamp } = JSON.parse(cached);
     if (Date.now() - timestamp > IP_CONFIG.CACHE_DURATION) {
         localStorage.removeItem(cacheKey);
@@ -250,35 +261,23 @@ const getIpInfoFromCache = (ip) => {
 const setIpInfoCache = (ip, data) => {
     if (!ip) return;
     const cacheKey = IP_CACHE_KEY_PREFIX + ip;
-    localStorage.setItem(cacheKey, JSON.stringify({
-        data,
-        timestamp: Date.now()
-    }));
+    localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() }));
 };
 
 // ================== 主流程 ==================
-
 const fetchIpInfo = async () => {
     if (!checkLocationPermission()) {
         showLocationPermissionDialog();
         return;
     }
-
     showLoadingSpinner();
-
     try {
         const userIp = await getUserIP();
-        if (!userIp) {
-            showErrorMessage('无法获取您的网络信息，请稍后重试');
-            return;
-        }
-
         const cachedData = getIpInfoFromCache(userIp);
         if (cachedData) {
             showWelcome(cachedData);
             return;
         }
-
         const data = await fetchIpData(userIp);
         setIpInfoCache(userIp, data);
         showWelcome(data);
@@ -297,16 +296,12 @@ const showErrorMessage = (message = '抱歉，无法获取信息') => {
             <p>请<i id="retry-button" class="fa-solid fa-arrows-rotate"></i>重试或检查网络连接</p>
         </div>
     `;
-
     document.getElementById('retry-button').addEventListener('click', fetchIpInfo);
 };
 
-const isHomePage = () => {
-    return window.location.pathname === '/' || window.location.pathname === '/index.html';
-};
+const isHomePage = () => window.location.pathname === '/' || window.location.pathname === '/index.html';
 
 // ================== 个性化问候语 ==================
-
 const greetings = {
     "中国": {
         "北京": "北——京——欢迎你~~~",
@@ -382,7 +377,7 @@ const greetings = {
     "英国": "Keep Calm and Carry On",
     "意大利": "La vita è bella!",
     "西班牙": "¡La vida es bella!",
-    "巴西": "A vida é bella!",
+    "巴西": "A vida é bela!",
     "印度": "जीवन सुंदर है!",
     "墨西哥": "¡La vida es bella!",
     "南非": "人生美好！",
@@ -435,7 +430,6 @@ const getTimeGreeting = () => {
 };
 
 // ================== 初始化 ==================
-
 document.addEventListener('DOMContentLoaded', () => {
     addStyles();
     insertAnnouncementComponent();
