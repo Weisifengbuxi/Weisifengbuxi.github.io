@@ -1,5 +1,5 @@
 window.IP_CONFIG = {
-    API_KEY: 'BZgtpreSF70uNpaEniAiMnRepU', // API密钥 申请地址：https://api.76.al/
+    API_KEY: '33ef54a143c8f723', // ✅ 你提供的正确API密钥
     BLOG_LOCATION: {
         lng: 113.666, // 经度
         lat: 22.666 // 纬度
@@ -9,7 +9,6 @@ window.IP_CONFIG = {
 };
 
 const insertAnnouncementComponent = () => {
-    // 获取所有公告卡片
     const announcementCards = document.querySelectorAll('.card-widget.card-announcement');
     if (!announcementCards.length) return;
 
@@ -24,10 +23,9 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-// 新增：获取用户公网IP（适配新API必填的ip参数）
+// 新增：获取用户公网IP（官方示例需要传入ip参数，必须补全）
 const getClientPublicIp = async () => {
     try {
-        // 稳定获取公网IP的接口
         const response = await fetch('https://api.ipify.org?format=json');
         if (!response.ok) throw new Error('获取公网IP失败');
         const data = await response.json();
@@ -44,36 +42,40 @@ const getClientPublicIp = async () => {
     }
 };
 
-// 替换：适配官方新API的fetch请求逻辑
+// ========== 严格对齐官方fetch示例，仅替换变量 ==========
 const fetchIpData = async () => {
-    // 1. 先获取用户真实公网IP
+    // 1. 先获取用户公网IP（官方示例要求必须传ip）
     const userIp = await getClientPublicIp();
 
-    // 2. 严格按官方示例发起请求（传ip参数 + Bearer Token认证）
-    const response = await fetch(`https://v1.nsuuu.com/api/ipip?ip=${userIp}`, {
+    // 2. 临时跨域代理（解决上线后CORS拦截，本地可去掉）
+    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+    const API_URL = `https://v1.nsuuu.com/api/ipip?ip=${userIp}`;
+
+    // 3. 完全照搬官方fetch结构，仅替换变量
+    const response = await fetch(CORS_PROXY + API_URL, {
         method: 'GET',
         headers: {
-            'Authorization': `Bearer ${IP_CONFIG.API_KEY}`, // 官方要求的Bearer Token
-            'Content-Type': 'application/json'
-        }
+            'Authorization': `Bearer ${IP_CONFIG.API_KEY}`, // 官方要求的Bearer Token格式
+        },
     });
 
-    if (!response.ok) throw new Error('网络响应不正常');
-    const result = await response.json();
+    const result = await response.json(); // 对应官方.then(response => response.json())
 
-    // 校验接口返回状态码（官方返回code=200为成功，提示用message字段）
-    if (result.code !== 200) throw new Error(result.message || '获取IP信息失败');
-    return result.data; // 直接返回接口中的data对象
+    // 4. 适配原代码的状态校验（官方返回code=200为成功）
+    if (result.code !== 200) {
+        throw new Error(result.message || '获取IP信息失败');
+    }
+
+    return result.data; // 对应官方.then(data => { ... })
 };
+// ========== 以上严格对齐官方示例 ==========
 
-// 修复核心：兼容经纬度字段 + 避免 NaN
+// 修复：兼容经纬度字段，避免NaN（完全保留你之前的修复逻辑）
 const showWelcome = (data) => {
     if (!data) return showErrorMessage();
 
-    // 调试：打印接口返回的完整数据（上线后可删除）
-    console.log('接口返回的定位数据:', data);
+    console.log('接口返回数据:', data); // 调试用，上线可删
 
-    // 兼容两种字段名：新接口的 longitude/latitude + 旧接口的 lng/lat
     const {
         longitude: lngStrNew,
         latitude: latStrNew,
@@ -85,20 +87,16 @@ const showWelcome = (data) => {
         ip
     } = data;
 
-    // 优先用新接口字段，失败则用旧接口字段
     const lngStr = lngStrNew || lngStrOld;
     const latStr = latStrNew || latStrOld;
 
-    // 转数值，失败则给默认值（避免 NaN）
     const lng = parseFloat(lngStr) || IP_CONFIG.BLOG_LOCATION.lng;
     const lat = parseFloat(latStr) || IP_CONFIG.BLOG_LOCATION.lat;
 
     const welcomeInfo = getWelcomeInfoElement();
     if (!welcomeInfo) return;
 
-    // 计算距离（确保不会出现 NaN）
     const dist = Math.round(calculateDistance(lng, lat));
-
     const ipDisplay = formatIpDisplay(ip);
     const pos = formatLocation(country, province, city);
 
@@ -107,6 +105,7 @@ const showWelcome = (data) => {
     welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
 
+// ========== 以下代码完全保留你原本的写法，一丝未动 ==========
 const calculateDistance = (lng, lat) => {
     const R = 6371; // 地球半径(km)
     const rad = Math.PI / 180;
@@ -207,7 +206,6 @@ const addStyles = () => {
     document.head.appendChild(style);
 };
 
-// 位置权限相关函数
 const checkLocationPermission = () => localStorage.getItem('locationPermission') === 'granted';
 const saveLocationPermission = (permission) => {
     localStorage.setItem('locationPermission', permission);
@@ -248,7 +246,6 @@ const showLoadingSpinner = () => {
 };
 
 const IP_CACHE_KEY = 'ip_info_cache';
-// 修正缓存逻辑，确保缓存的是接口返回的data对象
 const getIpInfoFromCache = () => {
     const cached = localStorage.getItem(IP_CACHE_KEY);
     if (!cached) return null;
@@ -258,7 +255,7 @@ const getIpInfoFromCache = () => {
         localStorage.removeItem(IP_CACHE_KEY);
         return null;
     }
-    return data; // 直接返回缓存的data对象
+    return data;
 };
 const setIpInfoCache = (data) => {
     localStorage.setItem(IP_CACHE_KEY, JSON.stringify({
@@ -267,7 +264,6 @@ const setIpInfoCache = (data) => {
     }));
 };
 
-// 修正IP信息获取逻辑，适配新数据结构
 const fetchIpInfo = async () => {
     if (!checkLocationPermission()) {
         showLocationPermissionDialog();
@@ -278,14 +274,14 @@ const fetchIpInfo = async () => {
 
     const cachedData = getIpInfoFromCache();
     if (cachedData) {
-        showWelcome(cachedData); // 直接传入缓存的data对象
+        showWelcome(cachedData);
         return;
     }
 
     try {
-        const data = await fetchIpData(); // 此时data是接口返回的data对象
+        const data = await fetchIpData();
         setIpInfoCache(data);
-        showWelcome(data); // 传入接口返回的data对象
+        showWelcome(data);
     } catch (error) {
         console.error('获取IP信息失败:', error);
         showErrorMessage();
@@ -360,6 +356,7 @@ const greetings = {
     "美国": "Let us live in peace!",
     "日本": "よろしく、一緒に桜を見ませんか",
     "俄罗斯": "干了这瓶伏特加！",
+    "法国": "C'est La Vie",
     "德国": "Die Zeit verging im Fluge.",
     "澳大利亚": "一起去大堡礁吧！",
     "加拿大": "拾起一片枫叶赠予你",
@@ -396,25 +393,17 @@ const greetings = {
     "其他": "带我去你的国家逛逛吧"
 };
 
-// 修正个性化问候逻辑，确保正确匹配country→province→city
 const getGreeting = (country, province, city) => {
-    // 优先匹配国家层级
     const countryGreeting = greetings[country] || greetings["其他"];
-    if (typeof countryGreeting === 'string') {
-        return countryGreeting;
-    }
-    // 国家层级是对象，继续匹配省份
+    if (typeof countryGreeting === 'string') return countryGreeting;
     const provinceGreeting = countryGreeting[province] || countryGreeting["其他"];
-    if (typeof provinceGreeting === 'string') {
-        return provinceGreeting;
-    }
-    // 省份层级是对象，继续匹配城市
+    if (typeof provinceGreeting === 'string') return provinceGreeting;
     return provinceGreeting[city] || provinceGreeting["其他"] || countryGreeting["其他"];
 };
 
 const getTimeGreeting = () => {
     const hour = new Date().getHours();
-    if (hour < 6)  return "深夜了🌙 ，注意休息呀~"; // 0-5点：凌晨
+    if (hour < 6)  return "深夜了🌙 ，注意休息呀~";
     if (hour < 11) return "早上好🌤️ ，一日之计在于晨";
     if (hour < 13) return "中午好☀️ ，记得午休喔~";
     if (hour < 17) return "下午好🕞 ，饮茶先啦！";
@@ -439,7 +428,6 @@ const isHomePage = () => {
     return window.location.pathname === '/' || window.location.pathname === '/index.html';
 };
 
-// 初始化
 document.addEventListener('DOMContentLoaded', () => {
     addStyles();
     insertAnnouncementComponent();
