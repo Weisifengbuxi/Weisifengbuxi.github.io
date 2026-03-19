@@ -1,5 +1,5 @@
 window.IP_CONFIG = {
-    API_KEY: 'BZgtpreSF70uNpaEniAiMnRepU', // API密钥 申请地址：https://api.76.al/
+    API_KEY: '33ef54a143c8f723', // API密钥 申请地址：https://api.76.al/
     BLOG_LOCATION: {
         lng: 113.666, // 经度
         lat: 22.666 // 纬度
@@ -24,23 +24,66 @@ const insertAnnouncementComponent = () => {
 
 const getWelcomeInfoElement = () => document.querySelector('#welcome-info');
 
-// 修正接口数据获取逻辑，适配返回结构
-const fetchIpData = async () => {
-    const response = await fetch(`https://api.nsmao.net/api/ipip/query?key=${encodeURIComponent(IP_CONFIG.API_KEY)}`);
-    if (!response.ok) throw new Error('网络响应不正常');
-    const result = await response.json();
-    // 校验接口返回状态码
-    if (result.code !== 200) throw new Error(result.msg || '获取IP信息失败');
-    return result.data; // 直接返回接口中的data对象（包含ip、country、province等）
+// ========== 以下是修改/新增的核心代码 ==========
+// 新增：获取用户公网IP（适配新API必填的ip参数）
+const getClientPublicIp = async () => {
+    try {
+        // 主接口：ipify（稳定可靠）
+        const response = await fetch('https://api.ipify.org?format=json');
+        if (!response.ok) throw new Error('获取公网IP失败');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        console.error('主接口获取IP失败，切换备用接口:', error);
+        try {
+            // 备用接口：ipapi.co
+            const backupRes = await fetch('https://ipapi.co/json/');
+            const backupData = await backupRes.json();
+            return backupData.ip;
+        } catch (backupErr) {
+            throw new Error('无法获取您的公网IP，请检查网络连接');
+        }
+    }
 };
 
-// 修正数据解析逻辑，适配经纬度字符串转数值
+// 替换：适配新API的IP定位请求逻辑
+const fetchIpData = async () => {
+    try {
+        // 1. 先获取用户真实公网IP
+        const userIp = await getClientPublicIp();
+
+        // 2. 发起新API请求（Bearer Token 认证 + IP 参数）
+        const response = await fetch(
+            `https://v1.nsuuu.com/api/ipip?ip=${encodeURIComponent(userIp)}`,
+            {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${IP_CONFIG.API_KEY}`, // 你的API密钥
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        if (!response.ok) throw new Error(`请求失败：${response.status} ${response.statusText}`);
+        const result = await response.json();
+
+        // 校验接口返回状态（新接口用message字段，适配原逻辑）
+        if (result.code !== 200) throw new Error(result.message || '获取IP信息失败');
+
+        return result.data; // 直接返回接口中的data对象
+    } catch (error) {
+        console.error('获取IP信息失败:', error);
+        throw error;
+    }
+};
+
+// 替换：适配新API的经纬度字段名（longitude/latitude → 原lng/lat）
 const showWelcome = (data) => {
     if (!data) return showErrorMessage();
 
     const {
-        lng: lngStr,  // 接口返回的是字符串，需转换为数值
-        lat: latStr,
+        longitude: lngStr,  // 新接口字段：longitude → 对应原代码的 lng
+        latitude: latStr,   // 新接口字段：latitude → 对应原代码的 lat
         country,
         province,
         city,
@@ -61,6 +104,7 @@ const showWelcome = (data) => {
     welcomeInfo.style.height = 'auto';
     welcomeInfo.innerHTML = generateWelcomeMessage(pos, dist, ipDisplay, country, province, city);
 };
+// ========== 以上是修改/新增的核心代码 ==========
 
 const calculateDistance = (lng, lat) => {
     const R = 6371; // 地球半径(km)
