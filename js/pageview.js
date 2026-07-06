@@ -3,7 +3,7 @@
   const el = document.getElementById('busuanzi_value_page_pv');
   if (!el) return;
 
-  const API = 'https://blog-counter-gamma.vercel.app/api/counter';
+  const API = 'https://counter.weisifengbuxi.top/api/counter';
   const page = window.location.pathname;
   let count = null;
 
