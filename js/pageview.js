@@ -1,28 +1,34 @@
-// 文章阅读量计数器 — 自建 Vercel API + 防 busuanzi 覆盖
-(async function () {
+// 文章阅读量计数器 — 异步加载 + localStorage 缓存
+(function () {
   const el = document.getElementById('busuanzi_value_page_pv');
   if (!el) return;
 
   const API = 'https://counter.weisifengbuxi.top/api/counter';
   const page = window.location.pathname;
-  let count = null;
+  const CACHE_KEY = 'pv_' + page;
 
-  try {
-    const res = await fetch(`${API}?page=${encodeURIComponent(page)}`, { method: 'POST' });
-    const data = await res.json();
-    if (data.count !== undefined) {
-      count = data.count;
-      el.textContent = count;
-    }
-  } catch (_) {
-    el.textContent = '—';
-  }
+  // 先从缓存读取，立即显示
+  const cached = localStorage.getItem(CACHE_KEY);
+  if (cached) el.textContent = cached;
 
-  // 防 busuanzi 超时覆盖：每 2 秒检查一次，持续 20 秒
+  // 后台异步获取最新值，不阻塞页面
+  fetch(API + '?page=' + encodeURIComponent(page), { method: 'POST' })
+    .then(r => r.json())
+    .then(d => {
+      if (d.count !== undefined) {
+        el.textContent = d.count;
+        localStorage.setItem(CACHE_KEY, d.count);
+      }
+    })
+    .catch(() => {
+      if (!cached) el.textContent = '—';
+    });
+
+  // 防 busuanzi 覆盖
   let checks = 0;
   const guard = setInterval(() => {
-    if (count !== null && el.textContent != count) {
-      el.textContent = count;
+    if (el.textContent != (cached || el.textContent)) {
+      el.textContent = cached || '—';
     }
     if (++checks >= 10) clearInterval(guard);
   }, 2000);
